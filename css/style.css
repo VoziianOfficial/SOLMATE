@@ -1,22 +1,4 @@
-/* ==========================================================
-   Solmate — Global Stylesheet
-   Includes:
-   - imports
-   - CSS variables
-   - reset
-   - typography
-   - layout helpers
-   - buttons
-   - forms base
-   - shared header
-   - services dropdown
-   - mobile menu
-   - footer
-   - FAQ
-   - cookie banner
-   - accessibility
-   - responsive foundation
-   ========================================================== */
+
 
 @import url("./home.css");
 @import url("./services.css");
