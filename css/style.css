@@ -1260,6 +1260,7 @@ button.button {
     height: 100%;
     object-fit: cover;
     transform: scale(1.01);
+    filter: brightness(1.14) contrast(1.05) saturate(1.08);
     transition:
         filter 320ms var(--ease-premium),
         transform 320ms var(--ease-premium);
@@ -1270,8 +1271,8 @@ button.button {
     inset: 0;
     z-index: 1;
     background:
-        linear-gradient(180deg, rgba(16, 9, 7, 0.12), rgba(16, 9, 7, 0.86)),
-        linear-gradient(110deg, rgba(16, 9, 7, 0.72), rgba(16, 9, 7, 0.2));
+        linear-gradient(180deg, rgba(16, 9, 7, 0.04), rgba(16, 9, 7, 0.58)),
+        linear-gradient(110deg, rgba(16, 9, 7, 0.42), rgba(16, 9, 7, 0.08));
 }
 
 .service-photo-card a::after {
@@ -1346,7 +1347,7 @@ button.button {
 
 .service-photo-card a:hover img {
     transform: scale(1.035);
-    filter: saturate(1.05) contrast(1.04);
+    filter: brightness(1.2) contrast(1.08) saturate(1.14);
 }
 
 .service-photo-card a:hover::after {
