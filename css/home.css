@@ -195,9 +195,16 @@
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(120deg, rgba(16, 9, 7, 0.64), rgba(74, 48, 32, 0.2)),
-        radial-gradient(circle at var(--solar-x, 68%) 30%, rgba(244, 122, 34, var(--solar-sky, 0.3)), transparent 18rem);
-    transition: background 260ms var(--ease-premium);
+        linear-gradient(120deg, rgba(16, 9, 7, 0.52), rgba(74, 48, 32, 0.16)),
+        radial-gradient(circle at var(--solar-x, 68%) 30%, rgba(244, 122, 34, var(--solar-sky, 0.26)), transparent 18rem),
+        url("../assets/images/solar-regulator.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(1.12) contrast(1.05) saturate(1.08);
+    transition:
+        background 260ms var(--ease-premium),
+        filter 260ms var(--ease-premium);
 }
 
 .solar-regulator__sun {

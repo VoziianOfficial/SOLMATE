@@ -485,15 +485,15 @@ button.button {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(16, 9, 7, 0.94) 0%, rgba(16, 9, 7, 0.74) 40%, rgba(26, 16, 11, 0.4) 100%),
-        linear-gradient(180deg, rgba(16, 9, 7, 0.32), rgba(16, 9, 7, 0.92));
+        linear-gradient(90deg, rgba(16, 9, 7, 0.78) 0%, rgba(16, 9, 7, 0.5) 42%, rgba(26, 16, 11, 0.18) 100%),
+        linear-gradient(180deg, rgba(16, 9, 7, 0.16), rgba(16, 9, 7, 0.68));
 }
 
 .page-hero--center .page-hero__bg::after {
     background:
-        radial-gradient(circle at 50% 42%, rgba(244, 122, 34, 0.16), transparent 28rem),
-        linear-gradient(180deg, rgba(16, 9, 7, 0.62), rgba(16, 9, 7, 0.9)),
-        linear-gradient(90deg, rgba(16, 9, 7, 0.82), rgba(16, 9, 7, 0.55), rgba(16, 9, 7, 0.82));
+        radial-gradient(circle at 50% 42%, rgba(244, 122, 34, 0.12), transparent 28rem),
+        linear-gradient(180deg, rgba(16, 9, 7, 0.42), rgba(16, 9, 7, 0.68)),
+        linear-gradient(90deg, rgba(16, 9, 7, 0.62), rgba(16, 9, 7, 0.28), rgba(16, 9, 7, 0.62));
 }
 
 .page-hero__content {
