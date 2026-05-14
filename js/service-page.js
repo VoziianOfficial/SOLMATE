@@ -40,7 +40,7 @@
         injectServiceHero(service, detail);
         injectServiceOverview(service, detail);
         renderCompareCards(detail);
-        renderPhotoBand(service, detail);
+        renderServicePhotoBand(service, detail);
         renderServiceProcess();
         injectServiceCta(service, detail);
         initCompareCardHover();
@@ -159,20 +159,47 @@
 
         if (!mount || !Array.isArray(detail.compareCards)) return;
 
-        mount.innerHTML = detail.compareCards
-            .map((card) => {
-                return `
-          <article class="service-compare-card">
-            <span class="service-compare-card__icon" aria-hidden="true">
-              <i data-lucide="${escapeAttribute(card.icon)}"></i>
-            </span>
+        mount.classList.remove("service-compare-grid");
+        mount.classList.add("service-compare-marquee-shell");
 
-            <h3>${escapeHtml(card.title)}</h3>
-            <p>${escapeHtml(card.text)}</p>
-          </article>
+        const cards = detail.compareCards;
+
+        const renderCard = (card, isDuplicate = false) => {
+            return `
+            <article class="service-compare-marquee-card" ${isDuplicate ? 'aria-hidden="true"' : ""}>
+                <span class="service-compare-marquee-card__icon" aria-hidden="true">
+                    <i data-lucide="${escapeAttribute(card.icon)}"></i>
+                </span>
+
+                <div>
+                    <h3>${escapeHtml(card.title)}</h3>
+                    <p>${escapeHtml(card.text)}</p>
+                </div>
+            </article>
         `;
-            })
+        };
+
+        const firstRow = [...cards, ...cards]
+            .map((card, index) => renderCard(card, index >= cards.length))
             .join("");
+
+        const secondRow = [...cards].reverse().concat([...cards].reverse())
+            .map((card, index) => renderCard(card, index >= cards.length))
+            .join("");
+
+        mount.innerHTML = `
+        <div class="service-compare-marquee service-compare-marquee--left">
+            <div class="service-compare-marquee__track">
+                ${firstRow}
+            </div>
+        </div>
+
+        <div class="service-compare-marquee service-compare-marquee--right">
+            <div class="service-compare-marquee__track">
+                ${secondRow}
+            </div>
+        </div>
+    `;
     }
 
     function initCompareCardHover() {
@@ -199,57 +226,57 @@
         });
     }
 
-    /* ==========================================================
-       Photo band
-       ========================================================== */
-
-    function renderPhotoBand(service, detail) {
+    function renderServicePhotoBand(service, detail) {
         const mount = document.querySelector("[data-service-photo-band]");
 
-        if (!mount || !Array.isArray(detail.photoBand)) return;
+        if (!mount || !service) return;
 
-        mount.innerHTML = detail.photoBand
-            .map((photo, index) => {
-                const labels = [
+        const photoItems = Array.isArray(detail.photoBand) && detail.photoBand.length
+            ? detail.photoBand
+            : Array.isArray(service.photoBandImages) && service.photoBandImages.length
+                ? service.photoBandImages.map((src) => ({
+                    src,
+                    alt: `${service.title} detail view`
+                }))
+                : [
                     {
-                        title: "Project context",
-                        text: "Compare scope, roof conditions, equipment, and service details."
+                        src: service.image,
+                        alt: `${service.title} detail view`
                     },
                     {
-                        title: "Provider review",
-                        text: "Verify licensing, insurance, quote terms, warranties, and timelines."
+                        src: service.image,
+                        alt: `${service.title} detail view`
                     },
                     {
-                        title: "Local availability",
-                        text: "Provider availability may vary by ZIP code and service category."
+                        src: service.image,
+                        alt: `${service.title} detail view`
                     }
                 ];
 
-                const label = labels[index] || labels[0];
+        const safeItems = photoItems.slice(0, 3);
+
+        while (safeItems.length < 3) {
+            safeItems.push({
+                src: service.image,
+                alt: `${service.title} detail view`
+            });
+        }
+
+        mount.innerHTML = safeItems
+            .map((item, index) => {
+                const directionClass = index === 1
+                    ? "service-photo-triangle--down"
+                    : "service-photo-triangle--up";
 
                 return `
-          <figure class="service-band-photo">
-            <img src="${escapeAttribute(photo.src)}" alt="${escapeAttribute(photo.alt)}" loading="lazy">
-
-            <figcaption class="service-band-photo__label">
-              <span>${escapeHtml(label.title)}</span>
-              <p>${escapeHtml(label.text)}</p>
-            </figcaption>
-          </figure>
-        `;
+                <figure class="service-photo-triangle ${directionClass}">
+                    <img src="${escapeAttribute(item.src)}" alt="${escapeAttribute(item.alt || service.title)}" loading="lazy">
+                </figure>
+            `;
             })
             .join("");
 
-        const title = document.querySelector("[data-service-photo-title]");
-        const text = document.querySelector("[data-service-photo-text]");
-
-        if (title) {
-            title.textContent = `${service.shortTitle || service.title} details deserve a closer look.`;
-        }
-
-        if (text) {
-            text.textContent = "Use the visual comparison section as a reminder to review project scope, equipment needs, warranty details, and provider availability before choosing who to contact directly.";
-        }
+        refreshIcons();
     }
 
     /* ==========================================================

@@ -84,6 +84,11 @@ window.SITE_CONFIG = {
                 "Estimated project timeline",
                 "Financing and payment structure",
                 "Provider licensing and insurance"
+            ],
+            photoBandImages: [
+                "./assets/images/solar-battery-wall.jpg",
+                "./assets/images/solar-home-evening.jpg",
+                "./assets/images/solar-panels-close.jpg"
             ]
         },
         {
@@ -107,6 +112,11 @@ window.SITE_CONFIG = {
                 "Removal and replacement scope",
                 "Upgrade options",
                 "Warranty transfer or renewal"
+            ],
+            photoBandImages: [
+                "./assets/images/solar-battery-wall.jpg",
+                "./assets/images/solar-home-evening.jpg",
+                "./assets/images/solar-panels-close.jpg"
             ]
         },
         {
@@ -130,6 +140,11 @@ window.SITE_CONFIG = {
                 "Wiring and connection concerns",
                 "Warranty status",
                 "Provider response time"
+            ],
+            photoBandImages: [
+                "./assets/images/solar-battery-wall.jpg",
+                "./assets/images/solar-home-evening.jpg",
+                "./assets/images/solar-panels-close.jpg"
             ]
         },
         {
@@ -153,6 +168,11 @@ window.SITE_CONFIG = {
                 "Monitoring tools",
                 "Warranty coverage",
                 "Installation scope"
+            ],
+            photoBandImages: [
+                "./assets/images/solar-battery-wall.jpg",
+                "./assets/images/solar-home-evening.jpg",
+                "./assets/images/solar-panels-close.jpg"
             ]
         }
     ],
@@ -462,8 +482,8 @@ window.SITE_CONFIG = {
                     alt: "Vertical solar panel close-up"
                 },
                 {
-                    src: "./assets/images/service-installation.jpg",
-                    alt: "Square solar installation planning image"
+                    src: "./assets/images/solar-home-evening.jpg",
+                    alt: "Square modern home with rooftop solar panels in warm evening light"
                 }
             ],
             compareCards: [
