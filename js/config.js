@@ -615,6 +615,34 @@ window.SITE_CONFIG = {
             location: "San Diego, CA",
             rating: "5.0",
             icon: "user-round-cog"
+        },
+        {
+            text: "It was helpful to have a checklist mindset going into calls—equipment, warranty, and timeline questions stayed front and center.",
+            name: "Olivia",
+            location: "Denver, CO",
+            rating: "4.9",
+            icon: "clipboard-check"
+        },
+        {
+            text: "I appreciated the calm tone and the reminder to confirm details directly with each provider instead of assuming a default package.",
+            name: "Noah",
+            location: "Sacramento, CA",
+            rating: "5.0",
+            icon: "badge-info"
+        },
+        {
+            text: "Comparing options felt more organized—installation vs. replacement questions were clearly separated, so I didn’t mix scopes.",
+            name: "Priya",
+            location: "Raleigh, NC",
+            rating: "4.8",
+            icon: "columns-3"
+        },
+        {
+            text: "The experience kept me focused on verification: permits, utility steps, and what’s included in the quote. That saved time.",
+            name: "Marcus",
+            location: "Las Vegas, NV",
+            rating: "4.9",
+            icon: "shield-check"
         }
     ],
 
