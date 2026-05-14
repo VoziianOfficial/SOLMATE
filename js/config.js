@@ -11,8 +11,7 @@ window.SITE_CONFIG = {
         phoneHrefs: ["tel:+18775550199"],
         emails: ["hello@solmate.com"],
         addresses: [
-            "1846 W Solar Ridge Ave",
-            "1846 W Solar Ridge Ave, "
+            "1846 W Solar Ridge Ave"
         ],
         serviceAreas: ["United States"]
     },
@@ -44,7 +43,6 @@ window.SITE_CONFIG = {
 
     assets: {
         faviconSvg: "./assets/icons/favicon.svg",
-        faviconIco: "./assets/icons/favicon.ico",
 
         images: {
             homeHero: "./assets/images/hero-home.jpg",
@@ -57,7 +55,6 @@ window.SITE_CONFIG = {
             solarPanelsClose: "./assets/images/solar-panels-close.jpg",
             solarHomeEvening: "./assets/images/solar-home-evening.jpg",
             solarBatteryWall: "./assets/images/solar-battery-wall.jpg",
-            solarAdvisor: "./assets/images/solar-advisor.jpg",
             solarCta: "./assets/images/solar-cta.jpg"
         }
     },
@@ -448,7 +445,7 @@ window.SITE_CONFIG = {
             },
             {
                 label: "Address",
-                value: "1846 W Solar Ridge Ave, Phoenix, AZ 85007, USA",
+                value: "1846 W Solar Ridge Ave",
                 href: null,
                 icon: "map-pin"
             },
