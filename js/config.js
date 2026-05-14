@@ -319,7 +319,7 @@ window.SITE_CONFIG = {
                     alt: "Premium residential home with rooftop solar panels"
                 },
                 {
-                    src: "./assets/images/solar-advisor.jpg",
+                    src: "./assets/images/solar-roof-wide.jpg",
                     alt: "Solar planning conversation in a warm residential setting"
                 }
             ]
