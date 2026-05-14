@@ -8,49 +8,49 @@
 @import url("./legal.css");
 
 :root {
-    /* Main dark chocolate base */
+    
     --color-bg: #1a100b;
     --color-bg-deep: #100907;
     --color-bg-soft: #24160f;
 
-    /* Warm contrast sections */
+    
     --color-section: #2f1f15;
     --color-section-alt: #4a3020;
     --color-section-light: #5a3a25;
 
-    /* Cards and surfaces */
+    
     --color-surface: #2a1a12;
     --color-surface-soft: #3b2618;
     --color-card: #2a1a12;
     --color-card-warm: #3a2619;
 
-    /* Typography */
+    
     --color-heading: #fff7ec;
     --color-text: #ead8c4;
     --color-muted: #b99b7f;
 
-    /* Main solar accent */
+    
     --color-accent: #f47a22;
     --color-accent-hover: #ff8a32;
     --color-accent-deep: #c75a12;
 
-    /* Premium gold details */
+    
     --color-gold: #d79b45;
     --color-gold-light: #f1c879;
     --color-gold-soft: rgba(215, 155, 69, 0.18);
 
-    /* Borders and lines */
+    
     --color-border: rgba(255, 231, 204, 0.14);
     --color-border-strong: rgba(244, 122, 34, 0.38);
     --color-border-gold: rgba(215, 155, 69, 0.32);
 
-    /* Shadows and glow */
+    
     --shadow-card: 0 24px 70px rgba(0, 0, 0, 0.38);
     --shadow-soft: 0 18px 48px rgba(0, 0, 0, 0.28);
     --glow-orange: 0 0 36px rgba(244, 122, 34, 0.22);
     --glow-gold: 0 0 34px rgba(215, 155, 69, 0.16);
 
-    /* Layout */
+    
     --container: 1180px;
     --container-wide: 1360px;
     --container-padding: clamp(18px, 4vw, 48px);
@@ -61,7 +61,7 @@
     --radius-button: 14px;
     --header-height: 82px;
 
-    /* Typography */
+    
     --font-main: "Inter", "Manrope", "Onest", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
 
@@ -77,9 +77,9 @@
     --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* ==========================================================
-   Reset / base
-   ========================================================== */
+
+
+
 
 *,
 *::before,
@@ -198,9 +198,9 @@ ol {
     background: var(--color-gold-light);
 }
 
-/* ==========================================================
-   Accessibility
-   ========================================================== */
+
+
+
 
 .skip-link {
     position: fixed;
@@ -236,9 +236,9 @@ ol {
     visibility: visible;
 }
 
-/* ==========================================================
-   Layout helpers
-   ========================================================== */
+
+
+
 
 .container,
 .container-wide {
@@ -336,9 +336,9 @@ ol {
     scroll-margin-top: calc(var(--header-height) + 28px);
 }
 
-/* ==========================================================
-   Buttons / links
-   ========================================================== */
+
+
+
 
 .button,
 button.button {
@@ -449,9 +449,9 @@ button.button {
     transform: translateX(4px);
 }
 
-/* ==========================================================
-   Shared page hero
-   ========================================================== */
+
+
+
 
 .page-hero {
     position: relative;
@@ -589,9 +589,9 @@ button.button {
     background: rgba(215, 155, 69, 0.08);
 }
 
-/* ==========================================================
-   Header
-   ========================================================== */
+
+
+
 
 .site-header {
     position: relative;
@@ -789,9 +789,9 @@ button.button {
     border-radius: 999px;
 }
 
-/* ==========================================================
-   Services dropdown
-   ========================================================== */
+
+
+
 
 .services-dropdown {
     position: absolute;
@@ -947,9 +947,9 @@ button.button {
     border-color: rgba(244, 122, 34, 0.24);
 }
 
-/* ==========================================================
-   Mobile menu
-   ========================================================== */
+
+
+
 
 .mobile-menu {
     position: fixed;
@@ -1133,9 +1133,9 @@ button.button {
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Cards / shared content blocks
-   ========================================================== */
+
+
+
 
 .info-card,
 .text-card,
@@ -1222,9 +1222,9 @@ button.button {
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Service photo cards
-   ========================================================== */
+
+
+
 
 .service-photo-grid {
     display: grid;
@@ -1354,9 +1354,9 @@ button.button {
     transform: translateX(120%);
 }
 
-/* ==========================================================
-   Service atlas cards
-   ========================================================== */
+
+
+
 
 .service-atlas-grid {
     display: grid;
@@ -1476,9 +1476,9 @@ button.button {
     box-shadow: var(--shadow-card), var(--glow-orange);
 }
 
-/* ==========================================================
-   FAQ
-   ========================================================== */
+
+
+
 
 .faq-list {
     display: grid;
@@ -1566,9 +1566,9 @@ button.button {
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Forms
-   ========================================================== */
+
+
+
 
 .form-card {
     position: relative;
@@ -1704,9 +1704,9 @@ button.button {
     font-size: var(--text-xs);
 }
 
-/* ==========================================================
-   Footer
-   ========================================================== */
+
+
+
 
 .site-footer {
     position: relative;
@@ -1827,9 +1827,9 @@ button.button {
     color: var(--color-text);
 }
 
-/* ==========================================================
-   Cookie / policy banner
-   ========================================================== */
+
+
+
 
 .policy-banner {
     position: fixed;
@@ -1899,9 +1899,9 @@ button.button {
     gap: 10px;
 }
 
-/* ==========================================================
-   Media / responsive foundation
-   ========================================================== */
+
+
+
 
 @media (max-width: 1180px) {
     :root {
@@ -2310,9 +2310,9 @@ button.button {
         animation-iteration-count: 1 !important;
     }
 }
-/* ==========================================================
-   Fixed header final fix
-   ========================================================== */
+
+
+
 
 [data-site-header] {
     position: fixed !important;
@@ -2334,15 +2334,15 @@ main {
     z-index: 1;
 }
 
-/* safer overflow behavior for sticky/fixed layouts */
+
 html,
 body {
     overflow-x: clip;
 }
 
-/* ==========================================================
-   Policy banner — narrower desktop width
-   ========================================================== */
+
+
+
 
 .policy-banner {
     left: 50%;
@@ -2360,7 +2360,7 @@ body {
     width: 100%;
 }
 
-/* Tablet / mobile: keep it comfortable */
+
 @media (max-width: 820px) {
     .policy-banner {
         width: min(calc(100% - 28px), 720px);

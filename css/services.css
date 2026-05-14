@@ -1,21 +1,21 @@
-/* ==========================================================
-   Solmate — Services Page Styles
-   Sections:
-   - services hero
-   - service atlas grid
-   - provider fit lens
-   - comparison factors
-   - services FAQ
-   - CTA photo strip
-   ========================================================== */
+
+
+
+
+
+
+
+
+
+
 
 .services-page main {
     overflow: hidden;
 }
 
-/* ==========================================================
-   Services hero
-   ========================================================== */
+
+
+
 
 .services-hero {
     min-height: clamp(500px, 68vh, 760px);
@@ -25,9 +25,9 @@
     max-width: 760px;
 }
 
-/* ==========================================================
-   Service atlas
-   ========================================================== */
+
+
+
 
 .services-atlas-section {
     position: relative;
@@ -88,9 +88,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Provider fit lens
-   ========================================================== */
+
+
+
 
 .provider-fit-section {
     position: relative;
@@ -209,9 +209,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Comparison factors
-   ========================================================== */
+
+
+
 
 .comparison-section {
     position: relative;
@@ -390,9 +390,9 @@
     transform: translateX(4px);
 }
 
-/* ==========================================================
-   Services FAQ
-   ========================================================== */
+
+
+
 
 .services-faq-section {
     position: relative;
@@ -458,17 +458,17 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Services CTA
-   ========================================================== */
+
+
+
 
 .services-page .photo-cta {
     border-top: 1px solid rgba(255, 231, 204, 0.1);
 }
 
-/* ==========================================================
-   Services responsive
-   ========================================================== */
+
+
+
 
 @media (max-width: 1180px) {
     .services-atlas__topline {
@@ -635,9 +635,9 @@
     }
 }
 
-/* ==========================================================
-   Keep atlas layout, but make cards equal size
-   ========================================================== */
+
+
+
 
 .services-page .service-atlas-grid {
     align-items: stretch;
@@ -664,9 +664,9 @@
     max-width: 520px;
 }
 
-/* ==========================================================
-   Premium light comparison scan section
-   ========================================================== */
+
+
+
 
 .comparison-scan-section {
     position: relative;
@@ -869,9 +869,9 @@
     line-height: 1.45;
 }
 
-/* ==========================================================
-   Hover for comparison scan cards
-   ========================================================== */
+
+
+
 
 .comparison-scan__board .comparison-scan__point {
     isolation: isolate;
@@ -914,21 +914,21 @@
     }
 }
 
-/* Make services FAQ visual card slightly taller */
+
 
 .services-faq-visual {
     min-height: 620px;
 }
 
-/* Reduce vertical padding for comparison scan section */
+
 
 .section.comparison-scan-section {
     padding-block: calc(var(--section-padding) / 2);
 }
 
-/* ==========================================================
-   Comparison scan — compact tablet/mobile layout
-   ========================================================== */
+
+
+
 
 @media (max-width: 1023px) {
     .comparison-scan__board {
@@ -1039,9 +1039,9 @@
     }
 }
 
-/* ==========================================================
-   Provider fit cards — tablet/mobile compact layout
-   ========================================================== */
+
+
+
 
 @media (max-width: 1180px) {
     .provider-fit-card {
@@ -1145,9 +1145,9 @@
     }
 }
 
-/* ==========================================================
-   Service path bridge section
-   ========================================================== */
+
+
+
 
 .service-path-section {
     position: relative;
@@ -1300,9 +1300,9 @@
     }
 }
 
-/* ==========================================================
-   Service path steps hover effects
-   ========================================================== */
+
+
+
 
 .service-path__steps article {
     position: relative;
@@ -1400,7 +1400,7 @@
         transform: none;
     }
 }
-/* Service path — tablet/mobile order: text first, photo second */
+
 
 @media (max-width: 1023px) {
     .service-path__content {

@@ -1,15 +1,15 @@
 "use strict";
 
-/* ==========================================================
-   Solmate — About Page Script
-   Page-specific enhancements only.
-   Shared behavior is handled by main.js:
-   - header
-   - footer
-   - FAQ
-   - cookie banner
-   - mobile menu
-   ========================================================== */
+
+
+
+
+
+
+
+
+
+
 
 (function () {
     const config = window.SITE_CONFIG;

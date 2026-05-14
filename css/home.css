@@ -1,23 +1,23 @@
-/* ==========================================================
-   Solmate — Home Page Styles
-   Sections:
-   - cinematic homepage hero
-   - solar mood regulator
-   - services photo grid
-   - process line
-   - editorial photo section
-   - testimonials slider
-   - compact FAQ
-   - CTA photo strip
-   ========================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
 
 .home-page main {
     overflow: hidden;
 }
 
-/* ==========================================================
-   Home hero
-   ========================================================== */
+
+
+
 
 .home-hero {
     min-height: clamp(620px, 86vh, 860px);
@@ -113,9 +113,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Solar mood regulator
-   ========================================================== */
+
+
+
 
 .solar-regulator-section {
     position: relative;
@@ -377,9 +377,9 @@
     line-height: 1.4;
 }
 
-/* ==========================================================
-   Home services
-   ========================================================== */
+
+
+
 
 .home-services {
     position: relative;
@@ -395,9 +395,9 @@
     background: linear-gradient(90deg, transparent, rgba(215, 155, 69, 0.4), transparent);
 }
 
-/* ==========================================================
-   How it works process
-   ========================================================== */
+
+
+
 
 .home-process {
     position: relative;
@@ -503,9 +503,9 @@
     color: var(--color-gold-light);
 }
 
-/* ==========================================================
-   Editorial two-photo section
-   ========================================================== */
+
+
+
 
 .home-editorial {
     position: relative;
@@ -620,9 +620,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Testimonials
-   ========================================================== */
+
+
+
 
 .testimonials-section {
     position: relative;
@@ -810,9 +810,9 @@
     background: var(--color-accent);
 }
 
-/* ==========================================================
-   Home compact FAQ
-   ========================================================== */
+
+
+
 
 .home-faq__layout {
     display: grid;
@@ -866,9 +866,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   CTA photo strip
-   ========================================================== */
+
+
+
 
 .photo-cta {
     position: relative;
@@ -938,9 +938,9 @@
     gap: 12px;
 }
 
-/* ==========================================================
-   Home responsive
-   ========================================================== */
+
+
+
 
 @media (max-width: 1180px) {
     .home-hero__micro-grid {
@@ -1210,9 +1210,9 @@
     }
 }
 
-/* ==========================================================
-   Light line-based home process
-   ========================================================== */
+
+
+
 
 .home-process--light {
     position: relative;
@@ -1407,7 +1407,7 @@
     color: #f47a22;
 }
 
-/* responsive */
+
 @media (max-width: 1023px) {
     .home-process__layout {
         grid-template-columns: 1fr;
@@ -1488,9 +1488,9 @@
 }
 
 
-/* ==========================================================
-   Home editorial single photo layout
-   ========================================================== */
+
+
+
 
 .home-editorial__layout--single-photo {
     display: grid;
@@ -1562,7 +1562,7 @@
     line-height: 1.45;
 }
 
-/* responsive */
+
 @media (max-width: 1180px) {
     .home-editorial__layout--single-photo {
         grid-template-columns: 1fr;
@@ -1618,7 +1618,7 @@
     }
 }
 
-/* Swap home editorial photo/text positions on desktop */
+
 .home-editorial__layout--single-photo .home-editorial__single-photo {
     order: 1;
 }
@@ -1637,7 +1637,7 @@
     }
 }
 
-/* Hover only for icons inside home editorial list */
+
 
 .home-editorial__item>span {
     position: relative;
@@ -1692,7 +1692,7 @@
     }
 }
 
-/* Background photo inside home FAQ note card — no layout shift */
+
 
 .home-faq__note {
     isolation: isolate;
@@ -1722,9 +1722,9 @@
     z-index: 1;
 }
 
-/* ==========================================================
-   Light premium Home FAQ section
-   ========================================================== */
+
+
+
 
 .home-faq {
     position: relative;
@@ -1769,9 +1769,9 @@
     z-index: 1;
 }
 
-/* ==========================================================
-   Mobile compact process lines
-   ========================================================== */
+
+
+
 
 @media (max-width: 640px) {
     .home-process__steps {

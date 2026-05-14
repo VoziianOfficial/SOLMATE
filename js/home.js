@@ -1,11 +1,11 @@
 "use strict";
 
-/* ==========================================================
-   Solmate — Home Page Script
-   Handles:
-   - interactive solar mood regulator
-   - premium testimonial slider without customer photos
-   ========================================================== */
+
+
+
+
+
+
 
 (function () {
     const config = window.SITE_CONFIG;

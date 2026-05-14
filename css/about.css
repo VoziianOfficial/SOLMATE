@@ -1,22 +1,22 @@
-/* ==========================================================
-   Solmate — About Page Styles
-   Sections:
-   - about hero
-   - what we do
-   - aggregator model diagram
-   - standards
-   - photo story
-   - about FAQ
-   - CTA strip
-   ========================================================== */
+
+
+
+
+
+
+
+
+
+
+
 
 .about-page main {
     overflow: hidden;
 }
 
-/* ==========================================================
-   About hero
-   ========================================================== */
+
+
+
 
 .about-hero {
     min-height: clamp(500px, 68vh, 760px);
@@ -26,9 +26,9 @@
     max-width: 780px;
 }
 
-/* ==========================================================
-   What we do
-   ========================================================== */
+
+
+
 
 .about-intro-section {
     position: relative;
@@ -172,9 +172,9 @@
     line-height: 1.35;
 }
 
-/* ==========================================================
-   Aggregator model diagram
-   ========================================================== */
+
+
+
 
 .model-diagram-section {
     position: relative;
@@ -271,9 +271,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Standards
-   ========================================================== */
+
+
+
 
 .standards-section {
     position: relative;
@@ -419,9 +419,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Photo story
-   ========================================================== */
+
+
+
 
 .about-photo-story {
     position: relative;
@@ -501,9 +501,9 @@
     line-height: 1.35;
 }
 
-/* ==========================================================
-   About FAQ
-   ========================================================== */
+
+
+
 
 .about-faq-layout {
     display: grid;
@@ -557,9 +557,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   About responsive
-   ========================================================== */
+
+
+
 
 @media (max-width: 1180px) {
     .about-intro {
@@ -755,9 +755,9 @@
     }
 }
 
-/* ==========================================================
-   About — light horizontal aggregator model
-   ========================================================== */
+
+
+
 
 .model-flow-section {
     position: relative;
@@ -1060,9 +1060,9 @@
     }
 }
 
-/* ==========================================================
-   About — horizontal standards strip
-   ========================================================== */
+
+
+
 
 .standards-strip-section {
     position: relative;
@@ -1205,7 +1205,7 @@
         0 0 32px rgba(244, 122, 34, 0.34);
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .standards-strip {
         grid-template-columns: 1fr;
@@ -1227,7 +1227,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .standards-strip-section {
         padding-block: 34px;
@@ -1273,9 +1273,9 @@
     object-position: center 25%;
 }
 
-/* ==========================================================
-   About — editorial photo story
-   ========================================================== */
+
+
+
 
 .about-photo-story--editorial {
     position: relative;
@@ -1442,7 +1442,7 @@
     line-height: 1.45;
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .about-photo-story__layout {
         grid-template-columns: 1fr;
@@ -1472,7 +1472,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .about-photo-story__points article {
         grid-template-columns: 42px minmax(0, 1fr);
@@ -1520,9 +1520,9 @@
     }
 }
 
-/* ==========================================================
-   About FAQ card — premium hover + shine
-   ========================================================== */
+
+
+
 
 .about-faq-card {
     position: relative;
@@ -1613,9 +1613,9 @@
     box-shadow: var(--glow-orange);
 }
 
-/* ==========================================================
-   About FAQ card — premium hover + shine
-   ========================================================== */
+
+
+
 
 .about-faq-card {
     position: sticky;
@@ -1707,7 +1707,7 @@
     box-shadow: var(--glow-orange);
 }
 
-/* Tablet / mobile: no sticky, no downward offset */
+
 @media (max-width: 1023px) {
     .about-faq-card {
         position: relative;
@@ -1716,9 +1716,9 @@
 }
 
 
-/* ==========================================================
-   About FAQ section — subtle solar logo pattern background
-   ========================================================== */
+
+
+
 
 .about-faq-section {
     position: relative;
@@ -1730,14 +1730,14 @@
         linear-gradient(180deg, var(--color-bg-soft), var(--color-bg-deep));
 }
 
-/* чтобы контент был поверх узоров */
+
 .about-faq-section>.container,
 .about-faq-section>.container-wide {
     position: relative;
     z-index: 2;
 }
 
-/* большой солнечный знак справа */
+
 .about-faq-section::before {
     content: "";
     position: absolute;
@@ -1766,7 +1766,7 @@
     -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.85), transparent 72%);
 }
 
-/* маленький солнечный знак слева снизу */
+
 .about-faq-section::after {
     content: "";
     position: absolute;
@@ -1792,7 +1792,7 @@
     -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.78), transparent 74%);
 }
 
-/* Fix: keep about FAQ photo bright on hover, shine over photo */
+
 
 .about-faq-card {
     background:
@@ -1804,7 +1804,7 @@
     background-repeat: no-repeat;
 }
 
-/* hover НЕ темнит карточку */
+
 .about-faq-card:hover,
 .about-faq-card:focus-within {
     background:
@@ -1820,7 +1820,7 @@
         0 0 34px rgba(244, 122, 34, 0.18);
 }
 
-/* блеск поверх фото */
+
 .about-faq-card::after {
     content: "";
     position: absolute;
@@ -1848,15 +1848,15 @@
     transform: translateX(380%) skewX(-16deg);
 }
 
-/* текст всегда поверх блеска */
+
 .about-faq-card>* {
     position: relative;
     z-index: 2;
 }
 
-/* ==========================================================
-   Tablet fix — compact model flow section
-   ========================================================== */
+
+
+
 
 @media (min-width: 641px) and (max-width: 1023px) {
     .model-flow-section {
@@ -1960,10 +1960,10 @@
     }
 }
 
-/* ==========================================================
-   Mobile — compact about intro notice
-   Icon top-right
-   ========================================================== */
+
+
+
+
 
 @media (max-width: 640px) {
     .about-intro__notice {
@@ -2035,9 +2035,9 @@
     }
 }
 
-/* ==========================================================
-   About photo story points — premium hover
-   ========================================================== */
+
+
+
 
 .about-photo-story__points article {
     position: relative;

@@ -1,24 +1,24 @@
 "use strict";
 
-/* ==========================================================
-   Solmate — Global Site Script
-   Handles:
-   - config safety
-   - page meta
-   - favicon links
-   - shared sticky header
-   - services dropdown
-   - full-screen mobile menu
-   - shared footer
-   - dynamic config injection
-   - service cards
-   - FAQ accordions
-   - FAQ schema
-   - cookie / policy banner
-   - contact form validation
-   - safe links
-   - responsive header offset
-   ========================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 (function () {
     const config = window.SITE_CONFIG;
@@ -60,9 +60,9 @@
         document.documentElement.classList.add("site-ready");
     }
 
-    /* ==========================================================
-       Page helpers
-       ========================================================== */
+    
+
+
 
     function getCurrentPage() {
         const path = window.location.pathname.split("/").pop();

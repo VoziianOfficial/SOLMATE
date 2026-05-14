@@ -1,21 +1,21 @@
-/* ==========================================================
-   Solmate — Contact Page Styles
-   Sections:
-   - contact hero
-   - line-based contact info
-   - main compact form
-   - what happens next
-   - contact FAQ
-   - short photo CTA
-   ========================================================== */
+
+
+
+
+
+
+
+
+
+
 
 .contact-page main {
     overflow: hidden;
 }
 
-/* ==========================================================
-   Contact hero
-   ========================================================== */
+
+
+
 
 .contact-hero {
     min-height: clamp(500px, 68vh, 760px);
@@ -25,9 +25,9 @@
     max-width: 760px;
 }
 
-/* ==========================================================
-   Contact intro
-   ========================================================== */
+
+
+
 
 .contact-intro-section {
     position: relative;
@@ -145,9 +145,9 @@
     letter-spacing: -0.035em;
 }
 
-/* ==========================================================
-   Contact form section
-   ========================================================== */
+
+
+
 
 .contact-form-section {
     position: relative;
@@ -299,9 +299,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   What happens next
-   ========================================================== */
+
+
+
 
 .contact-next-section {
     position: relative;
@@ -376,9 +376,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Contact FAQ
-   ========================================================== */
+
+
+
 
 .contact-faq-layout {
     display: grid;
@@ -432,9 +432,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Contact responsive
-   ========================================================== */
+
+
+
 
 @media (max-width: 1180px) {
     .contact-intro-grid {
@@ -621,9 +621,9 @@
 }
 
 
-/* ==========================================================
-   Contact form section — light premium photo/card redesign
-   ========================================================== */
+
+
+
 
 .contact-form-section {
     position: relative;
@@ -636,7 +636,7 @@
         linear-gradient(180deg, #fffaf2 0%, #f5e2ce 100%);
 }
 
-/* большое солнце на фоне секции */
+
 .contact-form-section::before {
     content: "";
     position: absolute;
@@ -664,7 +664,7 @@
     -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.9), transparent 72%);
 }
 
-/* второе мягкое солнце снизу */
+
 .contact-form-section::after {
     content: "";
     position: absolute;
@@ -699,7 +699,7 @@
     align-items: center;
 }
 
-/* левая карточка стала светлой и компактнее */
+
 .contact-form-copy {
     position: relative;
     padding: clamp(18px, 2.6vw, 30px);
@@ -728,7 +728,7 @@
     color: rgba(26, 16, 11, 0.68);
 }
 
-/* фото больше, квадратное и пропорциональное */
+
 .contact-form-copy__image {
     position: relative;
     isolation: isolate;
@@ -754,7 +754,7 @@
         filter 520ms var(--ease-premium);
 }
 
-/* мягкий слой, чтобы бейдж читался */
+
 .contact-form-copy__image::after {
     content: "";
     position: absolute;
@@ -766,7 +766,7 @@
     pointer-events: none;
 }
 
-/* блеск на фото */
+
 .contact-form-copy__image::before {
     content: "";
     position: absolute;
@@ -798,7 +798,7 @@
     transform: translateX(390%) skewX(-16deg);
 }
 
-/* бейдж на фото */
+
 .contact-form-copy__badge {
     position: absolute;
     left: 18px;
@@ -847,13 +847,13 @@
     line-height: 1.35;
 }
 
-/* форму тоже чуть подружим со светлой секцией */
+
 .contact-form-panel .form-card {
     border-color: rgba(199, 90, 18, 0.22);
     box-shadow: 0 24px 62px rgba(90, 58, 37, 0.18);
 }
 
-/* responsive */
+
 @media (max-width: 1180px) {
     .contact-form-copy__image {
         max-width: 620px;
@@ -912,7 +912,7 @@
     }
 }
 
-/* Make contact photo card wider and lower */
+
 
 .contact-form-layout {
     grid-template-columns: minmax(0, 1.18fr) minmax(390px, 0.82fr);
@@ -937,7 +937,7 @@
     max-width: 520px;
 }
 
-/* Tablet */
+
 @media (max-width: 1180px) {
     .contact-form-layout {
         grid-template-columns: 1fr;
@@ -953,7 +953,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .contact-form-copy {
         padding: 15px;
@@ -964,7 +964,7 @@
     }
 }
 
-/* Contact form card — premium hover + shine */
+
 
 .contact-form-panel .form-card {
     isolation: isolate;
@@ -1021,9 +1021,9 @@
     z-index: 2;
 }
 
-/* ==========================================================
-   Contact FAQ — light premium section
-   ========================================================== */
+
+
+
 
 .contact-faq-section {
     position: relative;
@@ -1036,7 +1036,7 @@
     color: #1a100b;
 }
 
-/* subtle premium grid */
+
 .contact-faq-section::before {
     content: "";
     position: absolute;
@@ -1051,7 +1051,7 @@
     -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 78%);
 }
 
-/* solar circle pattern */
+
 .contact-faq-section::after {
     content: "";
     position: absolute;
@@ -1091,7 +1091,7 @@
     align-items: start;
 }
 
-/* Left info card */
+
 .contact-faq-card {
     position: sticky;
     top: calc(var(--header-height) + 28px);
@@ -1151,7 +1151,7 @@
     font-size: var(--text-sm);
 }
 
-/* Light FAQ accordion only inside contact section */
+
 .contact-faq-section .faq-list {
     gap: 12px;
 }
@@ -1212,7 +1212,7 @@
     color: rgba(26, 16, 11, 0.66);
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .contact-faq-layout {
         grid-template-columns: 1fr;
@@ -1231,7 +1231,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .contact-faq-section {
         padding-block: 54px;
@@ -1259,9 +1259,9 @@
     }
 }
 
-/* ==========================================================
-   Contact FAQ — photo square card upgrade
-   ========================================================== */
+
+
+
 
 .contact-faq-layout {
     align-items: stretch;
@@ -1289,7 +1289,7 @@
         0 0 34px rgba(244, 122, 34, 0.12);
 }
 
-/* затемнение снизу для текста */
+
 .contact-faq-card::after {
     content: "";
     position: absolute;
@@ -1300,7 +1300,7 @@
         linear-gradient(180deg, transparent 0%, rgba(16, 9, 7, 0.2) 42%, rgba(16, 9, 7, 0.88) 100%);
 }
 
-/* солнечный мягкий блик */
+
 .contact-faq-card::before {
     content: "";
     position: absolute;
@@ -1334,7 +1334,7 @@
     color: rgba(255, 250, 243, 0.82);
 }
 
-/* hover: фото чуть ярче + мягкий zoom */
+
 .contact-faq-card:hover,
 .contact-faq-card:focus-within {
     transform: translateY(-4px);
@@ -1351,7 +1351,7 @@
         0 0 42px rgba(244, 122, 34, 0.2);
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .contact-faq-card {
         aspect-ratio: auto;
@@ -1361,7 +1361,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .contact-faq-card {
         min-height: 320px;
@@ -1377,9 +1377,9 @@
     }
 }
 
-/* ==========================================================
-   Fix Contact FAQ — keep FAQ questions normal height
-   ========================================================== */
+
+
+
 
 .contact-faq-layout {
     align-items: start;
@@ -1402,7 +1402,7 @@
     min-height: 58px;
 }
 
-/* Desktop: photo card stays square, but FAQ does NOT stretch */
+
 @media (min-width: 1024px) {
     .contact-faq-card {
         width: 100%;
@@ -1411,7 +1411,7 @@
     }
 }
 
-/* Tablet / mobile */
+
 @media (max-width: 1023px) {
     .contact-faq-card {
         aspect-ratio: auto;
@@ -1433,9 +1433,9 @@
     }
 }
 
-/* ==========================================================
-   Contact next cards — hover, shine, icon color change
-   ========================================================== */
+
+
+
 
 .contact-next-card {
     isolation: isolate;
@@ -1447,7 +1447,7 @@
         box-shadow 260ms var(--ease-premium);
 }
 
-/* блеск по карточке */
+
 .contact-next-card::after {
     content: "";
     position: absolute;
@@ -1469,7 +1469,7 @@
         opacity 220ms var(--ease-premium);
 }
 
-/* чтобы текст был выше блеска */
+
 .contact-next-card>* {
     position: relative;
     z-index: 2;
@@ -1492,7 +1492,7 @@
     transform: translateX(370%) skewX(-16deg);
 }
 
-/* номер / иконка */
+
 .contact-next-card__number {
     transition:
         color 240ms var(--ease-premium),
@@ -1513,7 +1513,7 @@
     filter: saturate(1.12);
 }
 
-/* заголовок чуть теплее при hover */
+
 .contact-next-card h3 {
     transition: color 220ms var(--ease-premium);
 }
@@ -1522,7 +1522,7 @@
     color: var(--color-gold-light);
 }
 
-/* текст чуть светлее при hover */
+
 .contact-next-card p {
     transition: color 220ms var(--ease-premium);
 }
@@ -1531,7 +1531,7 @@
     color: rgba(234, 216, 196, 0.9);
 }
 
-/* на тач-устройствах без прыжков */
+
 @media (hover: none) {
 
     .contact-next-card:hover,
@@ -1544,11 +1544,11 @@
     }
 }
 
-/* ==========================================================
-   Contact FAQ photo card — no movement, shine only
-   ========================================================== */
 
-/* карточка и фото НЕ двигаются */
+
+
+
+
 .contact-faq-layout .contact-faq-card,
 .contact-faq-layout .contact-faq-card:hover,
 .contact-faq-layout .contact-faq-card:focus-within {
@@ -1557,7 +1557,7 @@
     background-position: center !important;
 }
 
-/* hover без сдвига и без zoom */
+
 .contact-faq-layout .contact-faq-card:hover,
 .contact-faq-layout .contact-faq-card:focus-within {
     border-color: rgba(244, 122, 34, 0.46);
@@ -1566,7 +1566,7 @@
         0 0 38px rgba(244, 122, 34, 0.18);
 }
 
-/* затемнение + блеск поверх фото */
+
 .contact-faq-layout .contact-faq-card::after {
     content: "";
     position: absolute;
@@ -1594,19 +1594,19 @@
     transition: background-position 820ms var(--ease-premium);
 }
 
-/* сам блеск проходит по фото, но карточка не двигается */
+
 .contact-faq-layout .contact-faq-card:hover::after,
 .contact-faq-layout .contact-faq-card:focus-within::after {
     background-position: 160% 0, center;
 }
 
-/* контент поверх фото и блеска */
+
 .contact-faq-layout .contact-faq-card>* {
     position: relative;
     z-index: 2;
 }
 
-/* иконка может красиво реагировать, но без движения карточки */
+
 .contact-faq-layout .contact-faq-card__icon {
     transition:
         color 220ms var(--ease-premium),
@@ -1625,16 +1625,16 @@
         0 0 34px rgba(244, 122, 34, 0.28);
 }
 
-/* ==========================================================
-   Contact page — compact tablet/mobile cards
-   - contact info cards
-   - next step cards
-   ========================================================== */
 
-/* Tablet */
+
+
+
+
+
+
 @media (max-width: 1023px) {
 
-    /* Contact info cards */
+    
     .contact-intro-grid {
         gap: 10px;
     }
@@ -1678,7 +1678,7 @@
         line-height: 1.16;
     }
 
-    /* What happens next cards */
+    
     .contact-next-grid {
         gap: 10px;
     }
@@ -1725,7 +1725,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .contact-intro-grid {
         gap: 9px;
@@ -1792,7 +1792,7 @@
     }
 }
 
-/* Very small phones */
+
 @media (max-width: 430px) {
     .contact-info-item {
         padding: 14px;
@@ -1808,9 +1808,9 @@
     }
 }
 
-/* ==========================================================
-   Contact — request scope light strip
-   ========================================================== */
+
+
+
 
 .contact-scope-section {
     position: relative;
@@ -1967,7 +1967,7 @@
     line-height: 1.45;
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .contact-scope {
         grid-template-columns: 1fr;
@@ -1986,7 +1986,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .contact-scope-section {
         padding-block: 48px;
@@ -2010,10 +2010,10 @@
     }
 }
 
-/* ==========================================================
-   Contact scope rail — tablet/mobile compact cards
-   Icons/numbers on the right
-   ========================================================== */
+
+
+
+
 
 @media (max-width: 1023px) {
     .contact-scope__rail {

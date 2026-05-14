@@ -1,16 +1,16 @@
 "use strict";
 
-/* ==========================================================
-   Solmate — Contact Page Script
-   Page-specific enhancements only.
-   Shared behavior is handled by main.js:
-   - header
-   - footer
-   - form validation
-   - FAQ
-   - cookie banner
-   - mobile menu
-   ========================================================== */
+
+
+
+
+
+
+
+
+
+
+
 
 (function () {
     const config = window.SITE_CONFIG;

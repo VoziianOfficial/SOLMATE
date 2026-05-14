@@ -1,12 +1,12 @@
 "use strict";
 
-/* ==========================================================
-   Solmate — Legal Pages Script
-   Handles:
-   - legal page content injection from config.js
-   - active legal sidebar link
-   - legal contact info consistency
-   ========================================================== */
+
+
+
+
+
+
+
 
 (function () {
     const config = window.SITE_CONFIG;

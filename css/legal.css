@@ -1,24 +1,24 @@
-/* ==========================================================
-   Solmate — Legal Pages Styles
-   Shared by:
-   - privacy-policy.html
-   - cookie-policy.html
-   - terms-of-service.html
 
-   Sections:
-   - legal hero
-   - legal layout with sidebar
-   - policy content
-   - compact legal contact note
-   ========================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
 
 .legal-page main {
     overflow: hidden;
 }
 
-/* ==========================================================
-   Legal hero
-   ========================================================== */
+
+
+
 
 .legal-hero {
     min-height: clamp(430px, 58vh, 660px);
@@ -32,9 +32,9 @@
     font-size: clamp(2.4rem, 6vw, 5.5rem);
 }
 
-/* ==========================================================
-   Legal content layout
-   ========================================================== */
+
+
+
 
 .legal-content-section {
     position: relative;
@@ -57,9 +57,9 @@
     align-items: start;
 }
 
-/* ==========================================================
-   Legal sidebar
-   ========================================================== */
+
+
+
 
 .legal-sidebar {
     position: sticky;
@@ -131,7 +131,7 @@
     display: grid;
     grid-template-columns: 46px 1fr;
     gap: 12px;
-    align-items: start;
+    align-items: center;
     margin-top: 18px;
     padding-top: 18px;
     border-top: 1px solid rgba(255, 231, 204, 0.12);
@@ -143,13 +143,16 @@
     justify-content: center;
     width: 46px;
     height: 46px;
+    line-height: 0;
     color: var(--color-gold-light);
     background: rgba(215, 155, 69, 0.11);
     border: 1px solid rgba(215, 155, 69, 0.22);
     border-radius: 16px;
 }
 
-.legal-sidebar-note__icon i {
+.legal-sidebar-note__icon i,
+.legal-sidebar-note__icon svg {
+    display: block;
     width: 22px;
     height: 22px;
 }
@@ -168,9 +171,9 @@
     line-height: 1.45;
 }
 
-/* ==========================================================
-   Legal main policy content
-   ========================================================== */
+
+
+
 
 .legal-main {
     min-width: 0;
@@ -303,9 +306,9 @@
     color: var(--color-gold-light);
 }
 
-/* ==========================================================
-   Legal contact note
-   ========================================================== */
+
+
+
 
 .legal-contact-note {
     margin-top: 18px;
@@ -384,9 +387,9 @@
     margin: 0;
 }
 
-/* ==========================================================
-   Legal footer disclaimer inside document
-   ========================================================== */
+
+
+
 
 .legal-document-disclaimer {
     margin-top: 18px;
@@ -403,9 +406,9 @@
     color: var(--color-text);
 }
 
-/* ==========================================================
-   Legal responsive
-   ========================================================== */
+
+
+
 
 @media (max-width: 1180px) {
     .legal-layout {
@@ -505,4 +508,41 @@
         border-radius: 14px;
         line-height: 1.35;
     }
+}
+
+.legal-sidebar-note__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    line-height: 1;
+}
+
+.legal-sidebar-note__icon svg,
+.legal-sidebar-note__icon i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+.legal-sidebar-note__icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px;
+    height: 44px;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+
+.legal-sidebar-note__icon svg {
+    display: block !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+    transform: none !important;
 }

@@ -1,28 +1,28 @@
-/* ==========================================================
-   Solmate — Service Detail Page Styles
-   Shared by:
-   - solar-panel-installation.html
-   - solar-panel-replacement.html
-   - solar-panel-repair.html
-   - solar-battery-storage.html
 
-   Sections:
-   - service hero
-   - service overview split
-   - what to compare
-   - photo band
-   - service process
-   - service FAQ
-   - mini CTA
-   ========================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .service-detail-page main {
     overflow: hidden;
 }
 
-/* ==========================================================
-   Service hero
-   ========================================================== */
+
+
+
 
 .service-hero {
     min-height: clamp(520px, 72vh, 790px);
@@ -32,9 +32,9 @@
     max-width: 820px;
 }
 
-/* ==========================================================
-   Service overview split
-   ========================================================== */
+
+
+
 
 .service-overview-section {
     position: relative;
@@ -176,9 +176,9 @@
     line-height: 1.35;
 }
 
-/* ==========================================================
-   What to compare
-   ========================================================== */
+
+
+
 
 .service-compare-section {
     position: relative;
@@ -342,9 +342,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Photo band
-   ========================================================== */
+
+
+
 
 .service-photo-band-section {
     position: relative;
@@ -424,9 +424,9 @@
     line-height: 1.35;
 }
 
-/* ==========================================================
-   Process for this service
-   ========================================================== */
+
+
+
 
 .service-process-section {
     position: relative;
@@ -596,9 +596,9 @@
     color: var(--color-gold-light);
 }
 
-/* ==========================================================
-   Service FAQ
-   ========================================================== */
+
+
+
 
 .service-faq-layout {
     display: grid;
@@ -652,9 +652,9 @@
     font-size: var(--text-sm);
 }
 
-/* ==========================================================
-   Mini CTA
-   ========================================================== */
+
+
+
 
 .service-mini-cta {
     position: relative;
@@ -720,9 +720,9 @@
     gap: 12px;
 }
 
-/* ==========================================================
-   Service detail responsive
-   ========================================================== */
+
+
+
 
 @media (max-width: 1180px) {
     .service-overview {
@@ -945,9 +945,9 @@
 }
 
 
-/* ==========================================================
-   Service detail — triangle photo band
-   ========================================================== */
+
+
+
 
 .service-photo-band-section {
     position: relative;
@@ -1049,7 +1049,7 @@
     transform: translateX(390%) skewX(-16deg);
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .service-photo-band {
         gap: 10px;
@@ -1065,7 +1065,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-photo-band {
         gap: 6px;
@@ -1100,9 +1100,9 @@
     }
 }
 
-/* ==========================================================
-   Service photo band — tight mosaic triangles
-   ========================================================== */
+
+
+
 
 .service-photo-band {
     gap: 0;
@@ -1115,22 +1115,22 @@
     margin: 0;
 }
 
-/* сближаем треугольники, чтобы они выглядели как мозаика */
+
 .service-photo-triangle+.service-photo-triangle {
     margin-left: clamp(-92px, -6.4vw, -48px);
 }
 
-/* средний перевернутый треугольник чуть ниже */
+
 .service-photo-triangle--down {
     transform: translateY(20px);
 }
 
-/* чтобы при hover не ломалась мозаика */
+
 .service-photo-triangle--down:hover {
     transform: translateY(20px);
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .service-photo-triangle {
         width: clamp(220px, 32vw, 330px);
@@ -1146,7 +1146,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-photo-band {
         width: 100%;
@@ -1179,9 +1179,9 @@
     }
 }
 
-/* ==========================================================
-   Service compare section — running marquee cards
-   ========================================================== */
+
+
+
 
 .service-compare-marquee-shell {
     position: relative;
@@ -1378,7 +1378,7 @@
     }
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .service-compare-marquee-shell {
         gap: 10px;
@@ -1420,7 +1420,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-compare-marquee-shell {
         -webkit-mask-image: linear-gradient(90deg,
@@ -1469,29 +1469,29 @@
     }
 }
 
-/* Reduce top padding for service compare section by half */
+
 
 .service-detail-page .service-compare-section {
     padding-top: clamp(36px, 4vw, 66px);
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .service-detail-page .service-compare-section {
         padding-top: clamp(30px, 4vw, 48px);
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-detail-page .service-compare-section {
         padding-top: 32px;
     }
 }
 
-/* ==========================================================
-   Service process — light compact horizontal redesign
-   ========================================================== */
+
+
+
 
 .service-detail-page .service-process-section--light {
     position: relative;
@@ -1537,7 +1537,7 @@
     z-index: 1;
 }
 
-/* Layout */
+
 .service-detail-page .service-process-section--light .service-process-layout {
     display: grid;
     grid-template-columns: minmax(280px, 0.62fr) minmax(0, 1.38fr);
@@ -1545,7 +1545,7 @@
     align-items: center;
 }
 
-/* Left compact intro */
+
 .service-detail-page .service-process-section--light .service-process-intro {
     position: relative;
     top: auto;
@@ -1608,7 +1608,7 @@
     line-height: 1.48;
 }
 
-/* Flow side */
+
 .service-process-flow {
     min-width: 0;
 }
@@ -1624,7 +1624,7 @@
     display: none;
 }
 
-/* Compact cards */
+
 .service-detail-page .service-process-section--light .service-process-step {
     position: relative;
     min-height: 188px;
@@ -1746,7 +1746,7 @@
     line-height: 1.42;
 }
 
-/* Note */
+
 .service-detail-page .service-process-section--light .service-process-note {
     display: flex;
     align-items: flex-start;
@@ -1771,7 +1771,7 @@
     color: #f47a22;
 }
 
-/* Tablet */
+
 @media (max-width: 1180px) {
     .service-detail-page .service-process-section--light .service-process-layout {
         grid-template-columns: 1fr;
@@ -1812,7 +1812,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-detail-page .service-process-section--light {
         padding-block: 42px;
@@ -1870,9 +1870,9 @@
     }
 }
 
-/* ==========================================================
-   Service quick contrast strip — after hero
-   ========================================================== */
+
+
+
 
 .service-quick-strip {
     position: relative;
@@ -2013,7 +2013,7 @@
         0 0 28px rgba(244, 122, 34, 0.22);
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .service-quick-strip {
         padding-block: 22px;
@@ -2056,7 +2056,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-quick-strip {
         padding-block: 18px;

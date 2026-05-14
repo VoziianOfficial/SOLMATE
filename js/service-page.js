@@ -1,16 +1,16 @@
 "use strict";
 
-/* ==========================================================
-   Solmate — Service Detail Page Script
-   Handles:
-   - service-specific content injection
-   - service hero content
-   - overview content
-   - compare cards
-   - mixed photo band
-   - service process
-   - service FAQ key is handled by main.js
-   ========================================================== */
+
+
+
+
+
+
+
+
+
+
+
 
 (function () {
     const config = window.SITE_CONFIG;

@@ -1,15 +1,15 @@
 "use strict";
 
-/* ==========================================================
-   Solmate — Services Page Script
-   Page-specific enhancements only.
-   Shared rendering is handled by main.js:
-   - header
-   - footer
-   - service cards
-   - FAQ
-   - cookie banner
-   ========================================================== */
+
+
+
+
+
+
+
+
+
+
 
 (function () {
     const config = window.SITE_CONFIG;
