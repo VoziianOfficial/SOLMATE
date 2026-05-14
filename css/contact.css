@@ -1624,3 +1624,186 @@
         0 0 0 8px rgba(244, 122, 34, 0.12),
         0 0 34px rgba(244, 122, 34, 0.28);
 }
+
+/* ==========================================================
+   Contact page — compact tablet/mobile cards
+   - contact info cards
+   - next step cards
+   ========================================================== */
+
+/* Tablet */
+@media (max-width: 1023px) {
+
+    /* Contact info cards */
+    .contact-intro-grid {
+        gap: 10px;
+    }
+
+    .contact-info-item {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 52px;
+        align-items: start;
+        align-content: start;
+        gap: 14px;
+        padding: 18px;
+    }
+
+    .contact-info-item__content {
+        order: 1;
+    }
+
+    .contact-info-item__icon {
+        order: 2;
+        justify-self: end;
+        width: 52px;
+        height: 52px;
+        margin: 0;
+        border-radius: 18px;
+    }
+
+    .contact-info-item__icon i {
+        width: 24px;
+        height: 24px;
+    }
+
+    .contact-info-item__content span {
+        margin-bottom: 6px;
+    }
+
+    .contact-info-item__content a,
+    .contact-info-item__content strong,
+    .contact-info-item__content p {
+        font-size: clamp(1rem, 2.2vw, 1.22rem);
+        line-height: 1.16;
+    }
+
+    /* What happens next cards */
+    .contact-next-grid {
+        gap: 10px;
+    }
+
+    .contact-next-card {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 58px;
+        align-items: start;
+        align-content: start;
+        gap: 12px 16px;
+        padding: 18px;
+        border-radius: 22px;
+    }
+
+    .contact-next-card>div {
+        display: contents;
+    }
+
+    .contact-next-card__number {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        justify-self: end;
+        width: 58px;
+        height: 58px;
+        margin: 0;
+        font-size: 0.95rem;
+    }
+
+    .contact-next-card h3 {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0 0 6px;
+        font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+        line-height: 1.05;
+    }
+
+    .contact-next-card p {
+        grid-column: 1;
+        grid-row: 2;
+        max-width: 680px;
+        font-size: 0.86rem;
+        line-height: 1.45;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .contact-intro-grid {
+        gap: 9px;
+    }
+
+    .contact-info-item {
+        grid-template-columns: minmax(0, 1fr) 46px;
+        padding: 15px;
+        gap: 12px;
+        border-radius: 18px;
+    }
+
+    .contact-info-item__icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 16px;
+    }
+
+    .contact-info-item__icon i {
+        width: 21px;
+        height: 21px;
+    }
+
+    .contact-info-item__content span {
+        margin-bottom: 4px;
+        font-size: 0.68rem;
+    }
+
+    .contact-info-item__content a,
+    .contact-info-item__content strong,
+    .contact-info-item__content p {
+        font-size: 0.98rem;
+        line-height: 1.14;
+    }
+
+    .contact-next-grid {
+        gap: 9px;
+    }
+
+    .contact-next-card {
+        grid-template-columns: minmax(0, 1fr) 50px;
+        padding: 16px;
+        gap: 10px 14px;
+        border-radius: 20px;
+    }
+
+    .contact-next-card__number {
+        width: 50px;
+        height: 50px;
+        font-size: 0.82rem;
+        box-shadow:
+            0 0 0 6px rgba(244, 122, 34, 0.08),
+            var(--glow-orange);
+    }
+
+    .contact-next-card h3 {
+        font-size: 1.12rem;
+        margin-bottom: 4px;
+    }
+
+    .contact-next-card p {
+        font-size: 0.82rem;
+        line-height: 1.4;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 430px) {
+    .contact-info-item {
+        padding: 14px;
+    }
+
+    .contact-next-card {
+        padding: 14px;
+    }
+
+    .contact-next-card__number {
+        width: 46px;
+        height: 46px;
+    }
+}
