@@ -2339,3 +2339,44 @@ html,
 body {
     overflow-x: clip;
 }
+
+/* ==========================================================
+   Policy banner — narrower desktop width
+   ========================================================== */
+
+.policy-banner {
+    left: 50%;
+    right: auto;
+    width: min(calc(100% - 48px), 1080px);
+    max-width: 1080px;
+    transform: translateX(-50%);
+}
+
+.policy-banner.is-hiding {
+    transform: translateX(-50%) translateY(18px);
+}
+
+.policy-banner__content {
+    width: 100%;
+}
+
+/* Tablet / mobile: keep it comfortable */
+@media (max-width: 820px) {
+    .policy-banner {
+        width: min(calc(100% - 28px), 720px);
+    }
+}
+
+@media (max-width: 640px) {
+    .policy-banner {
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-width: none;
+        transform: none;
+    }
+
+    .policy-banner.is-hiding {
+        transform: translateY(18px);
+    }
+}

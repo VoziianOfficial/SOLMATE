@@ -1959,3 +1959,184 @@
         line-height: 1.45;
     }
 }
+
+/* ==========================================================
+   Mobile — compact about intro notice
+   Icon top-right
+   ========================================================== */
+
+@media (max-width: 640px) {
+    .about-intro__notice {
+        position: relative;
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-top: 22px;
+        padding: 16px 68px 16px 16px;
+        text-align: left;
+        border-radius: 18px;
+        min-height: auto;
+    }
+
+    .about-intro__notice-icon {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 42px;
+        height: 42px;
+        margin: 0;
+        border-radius: 15px;
+    }
+
+    .about-intro__notice-icon i {
+        width: 20px;
+        height: 20px;
+    }
+
+    .about-intro__notice strong {
+        max-width: 220px;
+        margin-bottom: 6px;
+        font-size: 0.92rem;
+        line-height: 1.18;
+    }
+
+    .about-intro__notice p {
+        font-size: 0.8rem;
+        line-height: 1.42;
+    }
+}
+
+@media (max-width: 430px) {
+    .about-intro__notice {
+        padding: 14px 60px 14px 14px;
+        border-radius: 16px;
+    }
+
+    .about-intro__notice-icon {
+        top: 12px;
+        right: 12px;
+        width: 38px;
+        height: 38px;
+        border-radius: 14px;
+    }
+
+    .about-intro__notice-icon i {
+        width: 18px;
+        height: 18px;
+    }
+
+    .about-intro__notice strong {
+        max-width: 190px;
+        font-size: 0.88rem;
+    }
+
+    .about-intro__notice p {
+        font-size: 0.76rem;
+        line-height: 1.38;
+    }
+}
+
+/* ==========================================================
+   About photo story points — premium hover
+   ========================================================== */
+
+.about-photo-story__points article {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition:
+        padding-left 240ms var(--ease-premium),
+        border-color 240ms var(--ease-premium),
+        background 240ms var(--ease-premium);
+}
+
+.about-photo-story__points article::before {
+    content: "";
+    position: absolute;
+    inset: 8px auto 8px 0;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, var(--color-accent), transparent);
+    opacity: 0;
+    transform: scaleY(0.4);
+    transition:
+        opacity 240ms var(--ease-premium),
+        transform 240ms var(--ease-premium);
+}
+
+.about-photo-story__points article::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(90deg, rgba(244, 122, 34, 0.11), transparent 72%),
+        linear-gradient(135deg, rgba(255, 247, 236, 0.035), transparent);
+    opacity: 0;
+    transform: translateX(-12px);
+    transition:
+        opacity 240ms var(--ease-premium),
+        transform 240ms var(--ease-premium);
+}
+
+.about-photo-story__points article:hover {
+    padding-left: 14px;
+    border-bottom-color: rgba(244, 122, 34, 0.28);
+}
+
+.about-photo-story__points article:hover::before {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.about-photo-story__points article:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-photo-story__points article>span {
+    transition:
+        color 220ms var(--ease-premium),
+        transform 220ms var(--ease-premium),
+        text-shadow 220ms var(--ease-premium);
+}
+
+.about-photo-story__points article:hover>span {
+    color: var(--color-gold-light);
+    transform: translateX(3px);
+    text-shadow: 0 0 18px rgba(244, 122, 34, 0.34);
+}
+
+.about-photo-story__points h3 {
+    transition:
+        color 220ms var(--ease-premium),
+        transform 220ms var(--ease-premium);
+}
+
+.about-photo-story__points article:hover h3 {
+    color: var(--color-gold-light);
+    transform: translateX(2px);
+}
+
+.about-photo-story__points p {
+    transition:
+        color 220ms var(--ease-premium),
+        transform 220ms var(--ease-premium);
+}
+
+.about-photo-story__points article:hover p {
+    color: rgba(234, 216, 196, 0.9);
+    transform: translateX(2px);
+}
+
+@media (hover: none) {
+
+    .about-photo-story__points article:hover,
+    .about-photo-story__points article:hover>span,
+    .about-photo-story__points article:hover h3,
+    .about-photo-story__points article:hover p {
+        transform: none;
+    }
+
+    .about-photo-story__points article:hover {
+        padding-left: 0;
+    }
+}
