@@ -24,7 +24,7 @@ window.SITE_CONFIG = {
         state: "AZ",
         zip: "85007",
         country: "USA",
-        full: "1846 W Solar Ridge Ave, Phoenix, AZ 85007, USA"
+        full: "1846 W Solar Ridge Ave"
     },
 
     serviceArea: "United States",
@@ -720,6 +720,10 @@ window.SITE_CONFIG = {
             {
                 question: "Do I need to verify provider details myself?",
                 answer: "Yes. Homeowners should verify licensing, insurance, quotes, warranties, timelines, and scope directly with providers."
+            },
+            {
+                question: "Does Solmate provide solar pricing or quotes?",
+                answer: "No. Solmate helps organize provider-matching context and comparison factors. Pricing and quotes come from independent providers, and homeowners should confirm all details directly with each provider."
             }
         ],
 
