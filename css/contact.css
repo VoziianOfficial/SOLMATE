@@ -1807,3 +1807,313 @@
         height: 46px;
     }
 }
+
+/* ==========================================================
+   Contact — request scope light strip
+   ========================================================== */
+
+.contact-scope-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding-block: clamp(48px, 5vw, 78px);
+    color: #1a100b;
+    background:
+        radial-gradient(circle at 10% 0%, rgba(244, 122, 34, 0.13), transparent 26rem),
+        radial-gradient(circle at 92% 80%, rgba(215, 155, 69, 0.12), transparent 28rem),
+        linear-gradient(180deg, #fffaf3 0%, #f5e4cf 100%);
+}
+
+.contact-scope-section::before {
+    content: "";
+    position: absolute;
+    right: clamp(-260px, -12vw, -120px);
+    top: clamp(-210px, -10vw, -90px);
+    z-index: 0;
+    width: clamp(340px, 40vw, 620px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.32;
+    background:
+        radial-gradient(circle,
+            transparent 0 17%,
+            rgba(244, 122, 34, 0.18) 18% 19%,
+            transparent 20% 34%,
+            rgba(215, 155, 69, 0.16) 35% 36%,
+            transparent 37% 52%,
+            rgba(244, 122, 34, 0.13) 53% 54%,
+            transparent 55%),
+        repeating-conic-gradient(from -8deg,
+            rgba(244, 122, 34, 0.18) 0deg 3deg,
+            transparent 3deg 15deg);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.9), transparent 74%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.9), transparent 74%);
+}
+
+.contact-scope {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1.14fr);
+    gap: clamp(26px, 5vw, 72px);
+    align-items: center;
+}
+
+.contact-scope .section-eyebrow {
+    color: #c75a12;
+}
+
+.contact-scope .section-eyebrow::before,
+.contact-scope .section-eyebrow::after {
+    background: #f47a22;
+}
+
+.contact-scope .section-title {
+    color: #1a100b;
+}
+
+.contact-scope .section-text {
+    color: rgba(26, 16, 11, 0.68);
+}
+
+.contact-scope__rail {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 1px solid rgba(199, 90, 18, 0.2);
+    border-radius: 30px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(255, 248, 239, 0.5));
+    box-shadow:
+        0 22px 58px rgba(90, 58, 37, 0.13),
+        inset 0 1px 0 rgba(255, 255, 255, 0.86);
+    overflow: hidden;
+}
+
+.contact-scope__item {
+    position: relative;
+    min-height: 138px;
+    display: grid;
+    align-content: start;
+    gap: 7px;
+    padding: clamp(18px, 2.4vw, 26px);
+    border-right: 1px solid rgba(199, 90, 18, 0.14);
+    border-bottom: 1px solid rgba(199, 90, 18, 0.14);
+    overflow: hidden;
+    transition:
+        background 240ms var(--ease-premium),
+        transform 240ms var(--ease-premium);
+}
+
+.contact-scope__item:nth-child(2n) {
+    border-right: 0;
+}
+
+.contact-scope__item:nth-child(n + 3) {
+    border-bottom: 0;
+}
+
+.contact-scope__item::before {
+    content: "";
+    position: absolute;
+    inset: -40% auto -40% -65%;
+    width: 46%;
+    background: linear-gradient(105deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.1) 34%,
+            rgba(255, 255, 255, 0.45) 50%,
+            rgba(255, 255, 255, 0.1) 66%,
+            transparent 100%);
+    opacity: 0;
+    transform: skewX(-16deg);
+    transition:
+        transform 760ms var(--ease-premium),
+        opacity 220ms var(--ease-premium);
+    pointer-events: none;
+}
+
+.contact-scope__item:hover {
+    background: rgba(255, 255, 255, 0.58);
+    transform: translateY(-2px);
+}
+
+.contact-scope__item:hover::before {
+    opacity: 1;
+    transform: translateX(360%) skewX(-16deg);
+}
+
+.contact-scope__item span {
+    color: #f47a22;
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.contact-scope__item strong {
+    color: #1a100b;
+    font-family: var(--font-display);
+    font-size: clamp(1.08rem, 1.45vw, 1.32rem);
+    font-weight: 540;
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+}
+
+.contact-scope__item p {
+    max-width: 280px;
+    color: rgba(26, 16, 11, 0.66);
+    font-size: var(--text-sm);
+    line-height: 1.45;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+    .contact-scope {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contact-scope .section-text {
+        margin-inline: auto;
+    }
+
+    .contact-scope__rail {
+        max-width: 760px;
+        width: 100%;
+        margin-inline: auto;
+        text-align: left;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .contact-scope-section {
+        padding-block: 48px;
+    }
+
+    .contact-scope__rail {
+        grid-template-columns: 1fr;
+        border-radius: 24px;
+    }
+
+    .contact-scope__item,
+    .contact-scope__item:nth-child(n) {
+        min-height: auto;
+        padding: 17px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(199, 90, 18, 0.14);
+    }
+
+    .contact-scope__item:last-child {
+        border-bottom: 0;
+    }
+}
+
+/* ==========================================================
+   Contact scope rail — tablet/mobile compact cards
+   Icons/numbers on the right
+   ========================================================== */
+
+@media (max-width: 1023px) {
+    .contact-scope__rail {
+        gap: 10px;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        overflow: visible;
+    }
+
+    .contact-scope__rail .contact-scope__item {
+        position: relative;
+        min-height: 112px !important;
+        padding: 18px 76px 18px 18px !important;
+        border: 1px solid rgba(199, 90, 18, 0.16) !important;
+        border-radius: 22px;
+        background:
+            linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(255, 248, 239, 0.58));
+        box-shadow: 0 16px 38px rgba(90, 58, 37, 0.1);
+    }
+
+    .contact-scope__rail .contact-scope__item span {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        margin: 0;
+        color: #fffaf3;
+        background: linear-gradient(135deg, #f47a22, #d79b45);
+        border: 1px solid rgba(199, 90, 18, 0.24);
+        border-radius: 16px;
+        box-shadow:
+            0 0 0 7px rgba(244, 122, 34, 0.1),
+            0 14px 28px rgba(199, 90, 18, 0.18);
+        font-size: 0.76rem;
+        line-height: 1;
+    }
+
+    .contact-scope__rail .contact-scope__item strong {
+        font-size: 1.08rem;
+        line-height: 1.05;
+    }
+
+    .contact-scope__rail .contact-scope__item p {
+        max-width: none;
+        font-size: 0.82rem;
+        line-height: 1.38;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-scope__rail {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .contact-scope__rail .contact-scope__item,
+    .contact-scope__rail .contact-scope__item:nth-child(n) {
+        min-height: 94px !important;
+        padding: 15px 64px 15px 15px !important;
+        border-radius: 20px;
+    }
+
+    .contact-scope__rail .contact-scope__item span {
+        top: 14px;
+        right: 14px;
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        font-size: 0.7rem;
+        box-shadow:
+            0 0 0 5px rgba(244, 122, 34, 0.1),
+            0 12px 24px rgba(199, 90, 18, 0.16);
+    }
+
+    .contact-scope__rail .contact-scope__item strong {
+        font-size: 1rem;
+    }
+
+    .contact-scope__rail .contact-scope__item p {
+        font-size: 0.78rem;
+        line-height: 1.34;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .contact-scope__rail .contact-scope__item,
+    .contact-scope__rail .contact-scope__item:nth-child(n) {
+        min-height: 86px !important;
+        padding: 14px 58px 14px 14px !important;
+    }
+
+    .contact-scope__rail .contact-scope__item span {
+        width: 36px;
+        height: 36px;
+        border-radius: 13px;
+    }
+}

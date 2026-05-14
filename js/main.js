@@ -210,46 +210,39 @@
                 <i data-lucide="chevron-down" aria-hidden="true"></i>
               </a>
 
-              <div class="services-dropdown" data-services-panel>
-                <div class="services-dropdown__inner">
-                  <div class="services-dropdown__intro">
-                    <span class="services-dropdown__eyebrow">Solar categories</span>
-                    <strong>Compare provider options by service type.</strong>
-                    <p>
-                      Solmate helps organize independent solar provider options.
-                      Homeowners verify details directly with providers.
-                    </p>
-                  </div>
-
-                  <div class="services-dropdown__links">
-                    ${services
+            <div class="services-dropdown" data-services-panel>
+  <div class="services-dropdown__inner services-dropdown__inner--list-only">
+    <div class="services-dropdown__links">
+      ${services
                             .map((service) => {
                                 return `
-                          <a class="services-dropdown__link" href="${escapeAttribute(service.href)}">
-                            <span class="services-dropdown__icon">
-                              <i data-lucide="${escapeAttribute(service.icon)}" aria-hidden="true"></i>
-                            </span>
-                            <span>
-                              <strong>${escapeHtml(service.title)}</strong>
-                              <small>${escapeHtml(service.summary)}</small>
-                            </span>
-                          </a>
-                        `;
+            <a class="services-dropdown__link" href="${escapeAttribute(service.href)}">
+              <span class="services-dropdown__icon">
+                <i data-lucide="${escapeAttribute(service.icon)}" aria-hidden="true"></i>
+              </span>
+
+              <span>
+                <strong>${escapeHtml(service.title)}</strong>
+                <small>${escapeHtml(service.summary)}</small>
+              </span>
+            </a>
+          `;
                             })
                             .join("")}
 
-                    <a class="services-dropdown__link services-dropdown__link--all" href="services.html">
-                      <span class="services-dropdown__icon">
-                        <i data-lucide="layout-grid" aria-hidden="true"></i>
-                      </span>
-                      <span>
-                        <strong>All Services</strong>
-                        <small>View all solar service categories.</small>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+      <a class="services-dropdown__link services-dropdown__link--all" href="services.html">
+        <span class="services-dropdown__icon">
+          <i data-lucide="layout-grid" aria-hidden="true"></i>
+        </span>
+
+        <span>
+          <strong>All Services</strong>
+          <small>View all solar service categories.</small>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
             </div>
           `;
                 }

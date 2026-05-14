@@ -2380,3 +2380,17 @@ body {
         transform: translateY(18px);
     }
 }
+
+.services-dropdown {
+    width: min(420px, calc(100vw - 36px));
+}
+
+.services-dropdown__inner--list-only {
+    display: block;
+    padding: 12px;
+}
+
+.services-dropdown__inner--list-only .services-dropdown__links {
+    display: grid;
+    gap: 8px;
+}
