@@ -1144,3 +1144,270 @@
         font-size: 1.8rem;
     }
 }
+
+/* ==========================================================
+   Service path bridge section
+   ========================================================== */
+
+.service-path-section {
+    position: relative;
+    padding-block: clamp(46px, 6vw, 84px);
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 12% 0%, rgba(244, 122, 34, 0.1), transparent 24rem),
+        linear-gradient(180deg, #fffaf3 0%, #f6e5cf 100%);
+    color: #1a100b;
+}
+
+.service-path {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(28px, 5vw, 72px);
+    align-items: center;
+}
+
+.service-path__media {
+    position: relative;
+    min-height: clamp(320px, 34vw, 460px);
+    border-radius: 34px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(90, 58, 37, 0.16);
+}
+
+.service-path__media img {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    object-fit: cover;
+    filter: brightness(1.1) contrast(1.05) saturate(1.08);
+}
+
+.service-path__media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(255, 250, 243, 0.04), rgba(26, 16, 11, 0.34)),
+        radial-gradient(circle at 70% 18%, rgba(244, 122, 34, 0.16), transparent 18rem);
+}
+
+.service-path__content {
+    max-width: 780px;
+}
+
+.service-path-section .section-eyebrow {
+    color: #c75a12;
+}
+
+.service-path-section .section-eyebrow::before,
+.service-path-section .section-eyebrow::after {
+    background: #f47a22;
+}
+
+.service-path-section .section-title {
+    color: #1a100b;
+}
+
+.service-path-section .section-text {
+    color: rgba(26, 16, 11, 0.68);
+}
+
+.service-path__steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: clamp(24px, 4vw, 38px);
+    border-top: 1px solid rgba(26, 16, 11, 0.14);
+    border-bottom: 1px solid rgba(26, 16, 11, 0.14);
+}
+
+.service-path__steps article {
+    padding: 22px 18px;
+    border-right: 1px solid rgba(26, 16, 11, 0.12);
+}
+
+.service-path__steps article:last-child {
+    border-right: 0;
+}
+
+.service-path__steps span {
+    display: block;
+    margin-bottom: 10px;
+    color: #f47a22;
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.service-path__steps strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #1a100b;
+    font-family: var(--font-display);
+    font-size: clamp(1.05rem, 1.5vw, 1.32rem);
+    font-weight: 540;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.service-path__steps p {
+    color: rgba(26, 16, 11, 0.64);
+    font-size: 0.84rem;
+    line-height: 1.45;
+}
+
+@media (max-width: 1023px) {
+    .service-path {
+        grid-template-columns: 1fr;
+    }
+
+    .service-path__content {
+        max-width: 760px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .service-path-section .section-text {
+        margin-inline: auto;
+    }
+
+    .service-path__media {
+        max-width: 760px;
+        width: 100%;
+        margin-inline: auto;
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 720px) {
+    .service-path__steps {
+        grid-template-columns: 1fr;
+    }
+
+    .service-path__steps article {
+        padding: 18px 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(26, 16, 11, 0.12);
+    }
+
+    .service-path__steps article:last-child {
+        border-bottom: 0;
+    }
+
+    .service-path__media {
+        min-height: 300px;
+        border-radius: 26px;
+    }
+}
+
+/* ==========================================================
+   Service path steps hover effects
+   ========================================================== */
+
+.service-path__steps article {
+    position: relative;
+    overflow: hidden;
+    transition:
+        background 240ms var(--ease-premium),
+        transform 240ms var(--ease-premium),
+        box-shadow 240ms var(--ease-premium),
+        border-color 240ms var(--ease-premium);
+}
+
+.service-path__steps article::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #f47a22, #f1c879);
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:
+        opacity 240ms var(--ease-premium),
+        transform 320ms var(--ease-premium);
+}
+
+.service-path__steps article::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 0%, rgba(244, 122, 34, 0.12), transparent 12rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.44), transparent);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 240ms var(--ease-premium);
+}
+
+.service-path__steps article:hover {
+    background: rgba(255, 255, 255, 0.44);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 38px rgba(90, 58, 37, 0.12);
+    z-index: 2;
+}
+
+.service-path__steps article:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.service-path__steps article:hover::after {
+    opacity: 1;
+}
+
+.service-path__steps article>* {
+    position: relative;
+    z-index: 1;
+}
+
+.service-path__steps article span {
+    transition:
+        color 220ms var(--ease-premium),
+        transform 220ms var(--ease-premium);
+}
+
+.service-path__steps article:hover span {
+    color: #c75a12;
+    transform: translateX(4px);
+}
+
+.service-path__steps article strong {
+    transition: color 220ms var(--ease-premium);
+}
+
+.service-path__steps article:hover strong {
+    color: #c75a12;
+}
+
+.service-path__steps article p {
+    transition: color 220ms var(--ease-premium);
+}
+
+.service-path__steps article:hover p {
+    color: rgba(26, 16, 11, 0.78);
+}
+
+@media (hover: none) {
+    .service-path__steps article:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .service-path__steps article:hover span {
+        transform: none;
+    }
+}
+/* Service path — tablet/mobile order: text first, photo second */
+
+@media (max-width: 1023px) {
+    .service-path__content {
+        order: 1;
+    }
+
+    .service-path__media {
+        order: 2;
+    }
+}
