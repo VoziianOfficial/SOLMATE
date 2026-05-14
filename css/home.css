@@ -947,8 +947,13 @@
         grid-template-columns: 1fr;
     }
 
+    .home-hero__proof {
+        display: none;
+    }
+
     .home-hero__note {
-        justify-self: start;
+        justify-self: center;
+        margin-inline: auto;
     }
 
     .solar-regulator {

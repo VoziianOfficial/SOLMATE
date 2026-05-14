@@ -1,0 +1,30 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="16" fill="#100907"/>
+
+  <circle cx="32" cy="32" r="13.5" fill="url(#sunGradient)" stroke="#F1C879" stroke-width="1.6"/>
+
+  <path d="M32 8.5V15.2" stroke="#D79B45" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M32 48.8V55.5" stroke="#D79B45" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M55.5 32H48.8" stroke="#D79B45" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M15.2 32H8.5" stroke="#D79B45" stroke-width="2.2" stroke-linecap="round"/>
+
+  <path d="M48.6 15.4L43.9 20.1" stroke="#F47A22" stroke-width="2" stroke-linecap="round"/>
+  <path d="M20.1 43.9L15.4 48.6" stroke="#F47A22" stroke-width="2" stroke-linecap="round"/>
+  <path d="M48.6 48.6L43.9 43.9" stroke="#F47A22" stroke-width="2" stroke-linecap="round"/>
+  <path d="M20.1 20.1L15.4 15.4" stroke="#F47A22" stroke-width="2" stroke-linecap="round"/>
+
+  <path d="M27.5 36.5L36.8 27.2" stroke="#FFF7EC" stroke-width="1.7" stroke-linecap="round"/>
+  <path d="M25.8 29.4H38.2" stroke="#FFF7EC" stroke-width="1.25" stroke-linecap="round" opacity="0.75"/>
+  <path d="M25.8 34.5H38.2" stroke="#FFF7EC" stroke-width="1.25" stroke-linecap="round" opacity="0.75"/>
+
+  <circle cx="32" cy="32" r="21.5" stroke="#D79B45" stroke-opacity="0.28" stroke-width="1"/>
+  <circle cx="32" cy="32" r="26.5" stroke="#F47A22" stroke-opacity="0.16" stroke-width="1"/>
+
+  <defs>
+    <linearGradient id="sunGradient" x1="21" y1="20" x2="45" y2="45" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1C879"/>
+      <stop offset="0.48" stop-color="#F47A22"/>
+      <stop offset="1" stop-color="#C75A12"/>
+    </linearGradient>
+  </defs>
+</svg>
