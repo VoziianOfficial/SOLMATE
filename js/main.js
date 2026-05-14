@@ -43,6 +43,9 @@
         renderFaqSchema();
         renderPolicyBanner();
 
+        replaceLegacySiteData();
+        watchLegacySiteData();
+
         initHeaderScroll();
         initServicesDropdown();
         initMobileMenu();
@@ -1176,5 +1179,156 @@
         if (wideElements.length) {
             console.warn("Potential horizontal overflow elements:", wideElements);
         }
+    }
+
+
+    let legacySiteDataWatcherStarted = false;
+
+    function getFullAddress() {
+        const address = config.address || {};
+
+        if (address.full) return address.full;
+
+        return [
+            address.line1,
+            address.city,
+            address.state,
+            address.zip,
+            address.country
+        ].filter(Boolean).join(", ");
+    }
+
+    function replaceLegacySiteData(root = document.body) {
+        if (!root) return;
+
+        const legacy = config.legacyReplace || {};
+
+        const pairs = [
+            ...(legacy.companyNames || ["Solmate"]).map((oldValue) => [oldValue, config.companyName]),
+            ...(legacy.companyIds || ["Solmate Provider Matching LLC"]).map((oldValue) => [oldValue, config.companyId]),
+            ...(legacy.phones || ["(877) 555-0199"]).map((oldValue) => [oldValue, config.phone]),
+            ...(legacy.phoneHrefs || ["tel:+18775550199"]).map((oldValue) => [oldValue, config.phoneHref]),
+            ...(legacy.emails || ["hello@solmate.com"]).map((oldValue) => [oldValue, config.email]),
+            ...(legacy.addresses || []).map((oldValue) => [oldValue, getFullAddress()]),
+            ...(legacy.serviceAreas || ["United States"]).map((oldValue) => [oldValue, config.serviceArea])
+        ].filter(([oldValue, newValue]) => oldValue && newValue && oldValue !== newValue);
+
+        if (!pairs.length) return;
+
+        const replaceValue = (value) => {
+            let nextValue = String(value);
+
+            pairs.forEach(([oldValue, newValue]) => {
+                nextValue = nextValue.split(oldValue).join(newValue);
+            });
+
+            return nextValue;
+        };
+
+        const shouldSkip = (node) => {
+            const parent = node.parentElement;
+
+            return parent && ["SCRIPT", "STYLE", "NOSCRIPT"].includes(parent.tagName);
+        };
+
+        if (root.nodeType === Node.TEXT_NODE) {
+            if (!shouldSkip(root)) {
+                const nextValue = replaceValue(root.nodeValue);
+
+                if (nextValue !== root.nodeValue) {
+                    root.nodeValue = nextValue;
+                }
+            }
+
+            return;
+        }
+
+        if (root.nodeType !== Node.ELEMENT_NODE && root !== document.body) return;
+
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+            acceptNode(node) {
+                if (!node.nodeValue || shouldSkip(node)) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        });
+
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        textNodes.forEach((node) => {
+            const nextValue = replaceValue(node.nodeValue);
+
+            if (nextValue !== node.nodeValue) {
+                node.nodeValue = nextValue;
+            }
+        });
+
+        const attributeNames = ["title", "aria-label", "placeholder", "href", "alt", "content"];
+
+        const elements = [];
+
+        if (root.nodeType === Node.ELEMENT_NODE) {
+            elements.push(root);
+        }
+
+        if (root.querySelectorAll) {
+            elements.push(...root.querySelectorAll("*"));
+        }
+
+        elements.forEach((element) => {
+            attributeNames.forEach((attr) => {
+                const value = element.getAttribute(attr);
+
+                if (!value) return;
+
+                const nextValue = replaceValue(value);
+
+                if (nextValue !== value) {
+                    element.setAttribute(attr, nextValue);
+                }
+            });
+        });
+
+        document.title = replaceValue(document.title);
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+
+        if (metaDescription) {
+            const currentContent = metaDescription.getAttribute("content");
+
+            if (currentContent) {
+                metaDescription.setAttribute("content", replaceValue(currentContent));
+            }
+        }
+    }
+
+    function watchLegacySiteData() {
+        if (legacySiteDataWatcherStarted || !document.body) return;
+
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                mutation.addedNodes.forEach((node) => {
+                    replaceLegacySiteData(node);
+                });
+
+                if (mutation.type === "characterData") {
+                    replaceLegacySiteData(mutation.target);
+                }
+            });
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+            characterData: true
+        });
+
+        legacySiteDataWatcherStarted = true;
     }
 })();

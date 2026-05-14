@@ -4,6 +4,19 @@ window.SITE_CONFIG = {
     companyName: "Solmate",
     companyId: "Solmate Provider Matching LLC",
 
+    legacyReplace: {
+        companyNames: ["Solmate"],
+        companyIds: ["Solmate Provider Matching LLC"],
+        phones: ["(877) 555-0199"],
+        phoneHrefs: ["tel:+18775550199"],
+        emails: ["hello@solmate.com"],
+        addresses: [
+            "1846 W Solar Ridge Ave",
+            "1846 W Solar Ridge Ave, "
+        ],
+        serviceAreas: ["United States"]
+    },
+
     brand: {
         shortName: "Solmate",
         logoText: "Solmate",
