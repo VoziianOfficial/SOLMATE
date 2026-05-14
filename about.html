@@ -121,220 +121,219 @@
             </div>
         </section>
 
-        <!-- ======================================================
+    <!-- ======================================================
       Aggregator Model Diagram
     ======================================================= -->
-        <section class="section section--cocoa model-diagram-section" aria-labelledby="modelDiagramTitle">
-            <div class="container-wide">
-                <div class="section-header section-header--center">
-                    <span class="section-eyebrow">Aggregator model</span>
-
-                    <h2 class="section-title" id="modelDiagramTitle">
-                        Homeowner request to direct provider review.
-                    </h2>
-
-                    <p class="section-text">
-                        Solmate helps organize the matching path while keeping the final provider review,
-                        quote discussion, and verification steps between the homeowner and independent providers.
-                    </p>
-                </div>
-
-                <div class="model-diagram" aria-label="Solmate aggregator model">
-                    <article class="model-step">
-                        <div>
-                            <span class="model-step__number">01</span>
-                            <h3>Homeowner Request</h3>
-                        </div>
-
+    <section class="section model-flow-section" aria-labelledby="modelDiagramTitle">
+        <div class="container-wide">
+            <div class="model-flow__top">
+                <span class="section-eyebrow">Aggregator model</span>
+    
+                <h2 class="section-title" id="modelDiagramTitle">
+                    Homeowner request to direct provider review.
+                </h2>
+    
+                <p class="section-text">
+                    Solmate helps organize the matching path while the final provider review,
+                    quote discussion, and verification steps stay between the homeowner.
+                </p>
+            </div>
+    
+            <div class="model-flow" aria-label="Solmate aggregator model">
+                <div class="model-flow__line" aria-hidden="true"></div>
+    
+                <article class="model-flow__step">
+                    <span class="model-flow__node">
+                        <i data-lucide="home" aria-hidden="true"></i>
+                    </span>
+    
+                    <div class="model-flow__content">
+                        <small>01 / Request</small>
+                        <h3>Homeowner Request</h3>
                         <p>
                             The homeowner shares the solar service type, general location,
                             and project context through Solmate.
                         </p>
-                    </article>
-
-                    <article class="model-step">
-                        <div>
-                            <span class="model-step__number">02</span>
-                            <h3>Provider Options</h3>
-                        </div>
-
+                    </div>
+                </article>
+    
+                <article class="model-flow__step">
+                    <span class="model-flow__node">
+                        <i data-lucide="workflow" aria-hidden="true"></i>
+                    </span>
+    
+                    <div class="model-flow__content">
+                        <small>02 / Options</small>
+                        <h3>Provider Options</h3>
                         <p>
-                            Solmate helps organize relevant provider categories and comparison
-                            factors for installation, replacement, repair-related requests, or battery storage.
+                            Solmate helps organize relevant provider categories and conversations.
                         </p>
-                    </article>
-
-                    <article class="model-step">
-                        <div>
-                            <span class="model-step__number">03</span>
-                            <h3>Direct Provider Review</h3>
-                        </div>
-
+                    </div>
+                </article>
+    
+                <article class="model-flow__step">
+                    <span class="model-flow__node">
+                        <i data-lucide="file-check" aria-hidden="true"></i>
+                    </span>
+    
+                    <div class="model-flow__content">
+                        <small>03 / Review</small>
+                        <h3>Direct Provider Review</h3>
                         <p>
-                            Homeowners review quotes, licensing, insurance, warranties, timelines,
-                            financing terms, and scope details directly with providers.
+                            Homeowners review quotes, licensing, insurance, warranties,
+                            timelines, financing terms.
                         </p>
-                    </article>
-                </div>
+                    </div>
+                </article>
             </div>
-        </section>
+    
+            <p class="model-flow__note">
+                <i data-lucide="badge-info" aria-hidden="true"></i>
+                <span>
+                    Solmate does not perform solar installation, repair, replacement, or battery installation directly.
+                    Providers are independent, and homeowners should verify details directly.
+                </span>
+            </p>
+        </div>
+    </section>
 
-        <!-- ======================================================
+    <!-- ======================================================
       Our Standards
     ======================================================= -->
-        <section class="section standards-section" aria-labelledby="standardsTitle">
-            <div class="container-wide">
-                <div class="standards-layout">
-                    <aside class="standards-intro">
-                        <span class="standards-intro__icon" aria-hidden="true">
-                            <i data-lucide="badge-check"></i>
-                        </span>
-
-                        <h2 id="standardsTitle">
-                            Our platform standards.
-                        </h2>
-
-                        <p>
-                            Solmate is designed around clarity, comparison, and responsible aggregator-safe
-                            language. The platform does not claim to perform solar work directly.
-                        </p>
-                    </aside>
-
-                    <div class="standards-grid">
-                        <article class="standard-card">
-                            <span class="standard-card__icon" aria-hidden="true">
-                                <i data-lucide="sparkles"></i>
-                            </span>
-
-                            <h3>Clarity</h3>
-
-                            <p>
-                                The platform is built to make provider comparison steps easier
-                                to understand before homeowners contact independent companies.
-                            </p>
-                        </article>
-
-                        <article class="standard-card">
-                            <span class="standard-card__icon" aria-hidden="true">
-                                <i data-lucide="badge-info"></i>
-                            </span>
-
-                            <h3>Transparency</h3>
-
-                            <p>
-                                Solmate clearly states that providers are independent and that homeowners
-                                verify details directly with providers.
-                            </p>
-                        </article>
-
-                        <article class="standard-card">
-                            <span class="standard-card__icon" aria-hidden="true">
-                                <i data-lucide="columns-3"></i>
-                            </span>
-
-                            <h3>Provider comparison</h3>
-
-                            <p>
-                                Service categories, quote factors, warranties, project scope,
-                                and local availability stay central to the experience.
-                            </p>
-                        </article>
-
-                        <article class="standard-card">
-                            <span class="standard-card__icon" aria-hidden="true">
-                                <i data-lucide="clipboard-check"></i>
-                            </span>
-
-                            <h3>Verification reminders</h3>
-
-                            <p>
-                                Homeowners are reminded to confirm licensing, insurance, pricing,
-                                warranties, timelines, and terms directly.
-                            </p>
-                        </article>
-
-                        <article class="standard-card">
-                            <span class="standard-card__icon" aria-hidden="true">
-                                <i data-lucide="shield-alert"></i>
-                            </span>
-
-                            <h3>No direct installation claims</h3>
-
-                            <p>
-                                Solmate is not a contractor and does not perform solar installation,
-                                repair, replacement, or battery installation directly.
-                            </p>
-                        </article>
-
-                        <article class="standard-card">
-                            <span class="standard-card__icon" aria-hidden="true">
-                                <i data-lucide="map-pin"></i>
-                            </span>
-
-                            <h3>Availability awareness</h3>
-
-                            <p>
-                                Provider availability may vary by city, ZIP code, service type,
-                                provider category, project timing, and schedule.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======================================================
-      Photo Story Section
-    ======================================================= -->
-        <section class="section section--soft about-photo-story" aria-labelledby="photoStoryTitle">
-            <div class="container-wide">
-                <div class="section-header section-header--center">
-                    <span class="section-eyebrow">Why it matters</span>
-
-                    <h2 class="section-title" id="photoStoryTitle">
-                        Solar choices deserve a calmer comparison experience.
+    <section class="standards-strip-section" aria-labelledby="standardsTitle">
+        <div class="standards-strip__bg" aria-hidden="true">
+            <img src="./assets/images/solar-standards.jpg" alt="">
+        </div>
+    
+        <div class="container-wide">
+            <div class="standards-strip">
+                <div class="standards-strip__headline">
+                    <h2 id="standardsTitle">
+                        Clear standards.<br>
+                        Better comparison.
                     </h2>
-
-                    <p class="section-text">
-                        A residential solar project can involve roof conditions, equipment decisions,
-                        financing, warranties, utility timelines, and local availability. Solmate helps
-                        homeowners approach those conversations with more structure.
-                    </p>
+                    <span aria-hidden="true"></span>
                 </div>
-
-                <div class="about-photo-story__grid">
-                    <figure class="about-story-photo">
-                        <img src="./assets/images/solar-roof-wide.jpg"
-                            alt="Wide rooftop solar panel view with warm sunlight" loading="lazy">
-
-                        <figcaption class="about-story-photo__label">
-                            <span>Roof context</span>
-                            <p>Roof layout, system size, and local conditions can shape provider conversations.</p>
-                        </figcaption>
-                    </figure>
-
-                    <figure class="about-story-photo">
-                        <img src="./assets/images/solar-panels-close.jpg" alt="Close-up of reflective solar panels"
-                            loading="lazy">
-
-                        <figcaption class="about-story-photo__label">
-                            <span>Equipment</span>
-                            <p>Panels, inverters, batteries, and monitoring tools should be reviewed directly.</p>
-                        </figcaption>
-                    </figure>
-
-                    <figure class="about-story-photo">
-                        <img src="./assets/images/solar-battery-wall.jpg"
-                            alt="Modern solar battery storage equipment in a residential setting" loading="lazy">
-
-                        <figcaption class="about-story-photo__label">
-                            <span>Storage options</span>
-                            <p>Battery capacity, backup goals, compatibility, and warranties may vary by provider.</p>
-                        </figcaption>
-                    </figure>
+    
+                <div class="standards-strip__items" aria-label="Solmate platform standards">
+                    <article class="standards-strip__item">
+                        <span class="standards-strip__icon" aria-hidden="true">
+                            <i data-lucide="sparkles"></i>
+                        </span>
+    
+                        <div>
+                            <h3>Clarity</h3>
+                            <p>Understand provider comparison steps before contacting companies.</p>
+                        </div>
+                    </article>
+    
+                    <article class="standards-strip__item">
+                        <span class="standards-strip__icon" aria-hidden="true">
+                            <i data-lucide="badge-info"></i>
+                        </span>
+    
+                        <div>
+                            <h3>Transparency</h3>
+                            <p>Providers are independent and details should be verified directly.</p>
+                        </div>
+                    </article>
+    
+                    <article class="standards-strip__item">
+                        <span class="standards-strip__icon" aria-hidden="true">
+                            <i data-lucide="columns-3"></i>
+                        </span>
+    
+                        <div>
+                            <h3>Provider Comparison</h3>
+                            <p>Review quotes, equipment, warranties, timelines, and scope.</p>
+                        </div>
+                    </article>
+    
+                    <article class="standards-strip__item">
+                        <span class="standards-strip__icon" aria-hidden="true">
+                            <i data-lucide="shield-check"></i>
+                        </span>
+    
+                        <div>
+                            <h3>Verification Reminders</h3>
+                            <p>Confirm licensing, insurance, pricing, and service terms directly.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+<!-- ======================================================
+  Photo Story Section
+======================================================= -->
+<section class="section about-photo-story about-photo-story--editorial" aria-labelledby="photoStoryTitle">
+    <div class="container-wide">
+        <div class="about-photo-story__layout">
+            <div class="about-photo-story__content">
+                <span class="section-eyebrow">Why it matters</span>
+
+                <h2 class="section-title" id="photoStoryTitle">
+                    Solar choices deserve a calmer comparison experience.
+                </h2>
+
+                <p class="section-text">
+                    A residential solar project can involve roof conditions, equipment decisions,
+                    financing, warranties, utility timelines, and local availability. Solmate helps
+                    homeowners approach those conversations with more structure.
+                </p>
+
+                <div class="about-photo-story__points">
+                    <article>
+                        <span>01</span>
+                        <div>
+                            <h3>Roof context</h3>
+                            <p>Roof layout, system size, and local conditions can shape provider conversations.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span>02</span>
+                        <div>
+                            <h3>Equipment details</h3>
+                            <p>Panels, inverters, batteries, and monitoring tools should be reviewed directly.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span>03</span>
+                        <div>
+                            <h3>Storage options</h3>
+                            <p>Battery capacity, backup goals, compatibility, and warranties may vary by provider.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="about-photo-story__mosaic" aria-label="Residential solar imagery">
+                <figure class="about-photo-story__image about-photo-story__image--main">
+                    <img src="./assets/images/solar-roof-wide.jpg"
+                        alt="Wide rooftop solar panel view with warm sunlight" loading="lazy">
+
+                    <figcaption>
+                        <span>Residential solar context</span>
+                        <p>Provider conversations become easier when key project factors are organized first.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="about-photo-story__image about-photo-story__image--top">
+                    <img src="./assets/images/solar-panels-close.jpg" alt="Close-up of reflective solar panels"
+                        loading="lazy">
+                </figure>
+
+                <figure class="about-photo-story__image about-photo-story__image--bottom">
+                    <img src="./assets/images/solar-battery-wall.jpg"
+                        alt="Modern solar battery storage equipment in a residential setting" loading="lazy">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- ======================================================
       About FAQ
